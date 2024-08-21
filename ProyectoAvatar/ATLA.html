@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AVATAR: LA LEYENDA DE AANG</title>
+    <link rel="stylesheet" href="ATLA.css">
+    <script src="ATLA.js" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>LA LEYENDA DE AANG: EL JUEGO 🔥💧🍃🪨</h1>
+
+        <!-- Sección: Inicio -->
+        <section id="Inicio">
+            <button id="boton-jugar">Jugar</button>
+            <button id="boton-reglas">Reglas</button>
+        </section>
+
+        <!-- Sección: Reglas del Juego -->
+        <section id="reglas-del-juego">
+            <h4>REGLAS DEL JUEGO</h4>
+
+            <ol>
+                <li><strong>Selección de Personajes:</strong><br>
+                    Elige tu personaje favorito: Zuko, Katara, Aang o Toph.<br>
+                    El enemigo será seleccionado aleatoriamente entre los personajes restantes.
+                </li>
+                <li><strong>Selección de Ataques:</strong><br>
+                    Cada personaje tiene tres ataques: Golpe, Patada y Barrida.<br>
+                    Tú y el enemigo seleccionan simultáneamente un ataque.
+                </li>
+                <li><strong>Resolución del Combate:</strong><br>
+                    Ganas o pierdes vidas según la efectividad del ataque elegido:
+                    <ul>
+                        <li>Golpe vence a Barrida.</li>
+                        <li>Patada vence a Golpe.</li>
+                        <li>Barrida vence a Patada.</li>
+                    </ul>
+                    Comienzas con 3 vidas. El combate continúa hasta que uno de los personajes pierda todas sus vidas.
+                </li>
+                <li><strong>Condiciones de Victoria:</strong><br>
+                    Ganas si reduces las vidas del enemigo a cero.<br>
+                    Pierdes si tu personaje se queda sin vidas antes de derrotar al enemigo.
+                </li>
+            </ol>
+
+        </section>
+
+        <!-- Sección: Selección de Personaje -->
+        <section id="seleccionar-personaje">
+            <h2>Elige tu Personaje</h2>
+
+            <!-- Opciones de selección de personaje -->
+            <label for="zuko">
+                <img src="imagenes/zuko.jpg" alt="Zuko" class="personaje-imagen" onclick="seleccionarPersonaje('Zuko')">
+            </label>
+            <input type="radio" name="personaje" id="zuko" style="display: none;">
+
+            <label for="katara">
+                <img src="imagenes/katara.jpg" alt="Katara" class="personaje-imagen"
+                    onclick="seleccionarPersonaje('Katara')">
+            </label>
+            <input type="radio" name="personaje" id="katara" style="display: none;">
+
+            <label for="aang">
+                <img src="imagenes/aang.jpg" alt="Aang" class="personaje-imagen" onclick="seleccionarPersonaje('Aang')">
+            </label>
+            <input type="radio" name="personaje" id="aang" style="display: none;">
+
+            <label for="toph">
+                <img src="imagenes/toph.jpg" alt="Toph" class="personaje-imagen" onclick="seleccionarPersonaje('Toph')">
+            </label>
+            <input type="radio" name="personaje" id="toph" style="display: none;">
+
+            <!-- Botón para seleccionar personaje -->
+            <button id="boton-personaje">Seleccionar</button>
+        </section>
+
+        <!-- Sección: Selección de Ataque -->
+        <section id="seleccionar-ataque">
+            <h2>Elige tu ataque</h2>
+
+            <!-- Información sobre vidas de los personajes -->
+            <p>Tu personaje <span id="personaje-jugador"></span> tiene <span id="vidas-jugador">3</span> vidas</p>
+            <p>El personaje <span id="personaje-enemigo"></span> del enemigo tiene <span id="vidas-enemigo">3</span>
+                vidas</p>
+
+            <!-- Botones de selección de ataques -->
+            <p>
+                <button id="boton-golpe">Golpe 👊</button>
+                <button id="boton-patada">Patada 🦵</button>
+                <button id="boton-barrida">Barrida 🦶</button>
+            </p>
+        </section>
+
+        <!-- Sección: Mensajes -->
+        <section id="mensajes">
+            <!-- Aquí se mostrarán los mensajes de combate -->
+        </section>
+
+        <!-- Sección: Reiniciar Juego -->
+        <section id="reiniciar">
+            <button id="boton-reiniciar">Reiniciar</button>
+        </section>
+    </div>
+</body>
+
+</html>
