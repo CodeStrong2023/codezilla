@@ -1,3 +1,4 @@
+/* Estilos generales para el cuerpo de la página */
 body {
     font-family: 'Poppins', Arial, sans-serif;
     line-height: 1.6;
@@ -6,44 +7,49 @@ body {
     background-image: url('imagenes/fondo.jpg');
     background-size: cover;
     background-position: center;
-    background-attachment: fixed; 
+    background-attachment: fixed;
 }
 
+/* Contenedor principal */
 .container {
     max-width: 90%;
-    padding: 20px; /* Aumentado para mayor espaciado */
+    padding: 20px;
     text-align: center;
     margin: auto;
-    border-radius: 12px; /* Aumentado para mayor suavidad en los bordes */
-    box-shadow: 0 6px 12px rgba(245, 243, 243, 0.15); /* Sombra más pronunciada */
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(245, 243, 243, 0.15);
 }
 
+/* Imagen del título */
 .titulo-imagen {
-    width: 40%; /* Aumentado para mejor visibilidad */
+    width: 40%;
     height: auto;
-    margin-bottom: 20px; /* Aumentado para mayor espaciado */
+    margin-bottom: 10px;
 }
 
+/* Encabezados h2 */
 h2 {
-    font-size: 2.5em; /* Aumentado para mejor visibilidad */
-    margin-bottom: 20px; /* Aumentado para mayor espaciado */
+    font-size: 2em;
+    margin-bottom: 20px;
     color: #000000;
 }
 
-
+/* Estilos para secciones */
 section {
-    background-color: rgba(253, 253, 253, 0.5); /* Fondo más visible */
-    padding: 20px; /* Aumentado para mayor espaciado */
-    margin-bottom: 20px; /* Aumentado para mayor espaciado */
-    border-radius: 12px; /* Aumentado para mayor suavidad en los bordes */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Sombra más pronunciada */
+    background-color: rgba(253, 253, 253, 0.5);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
     text-align: left;
 }
 
+/* Oculta la sección con id 'reglas-del-juego' */
 section#reglas-del-juego {
     display: none;
 }
 
+/* Estilos para la sección de inicio */
 section#Inicio {
     display: flex;
     justify-content: center;
@@ -51,10 +57,12 @@ section#Inicio {
     flex-direction: column;
 }
 
+/* Estilos para los botones dentro de 'Inicio' */
 #Inicio button {
-    margin: 15px; /* Aumentado para mayor espaciado */
+    margin: 15px;
 }
 
+/* Estilos para la selección de personajes */
 #seleccionar-personaje {
     text-align: center;
     display: flex;
@@ -62,137 +70,152 @@ section#Inicio {
     justify-content: center;
 }
 
+/* Imágenes de los personajes */
 .personaje-imagen {
-    width: 150px; /* Aumentado para mejor visibilidad */
-    height: 150px; /* Aumentado para mejor visibilidad */
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
-    margin: 15px; /* Aumentado para mayor espaciado */
+    margin: 15px;
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* Efecto de hover para las imágenes de personajes */
 .personaje-imagen:hover {
-    transform: scale(1.1); /* Aumento más notable al pasar el cursor */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
+/* Estilos para la selección de ataques */
 #seleccionar-ataque {
     text-align: center;
 }
 
+/* Encabezado en la selección de ataques */
 #seleccionar-ataque h2 {
-    margin-bottom: 20px; /* Aumentado para mayor espaciado */
+    margin-bottom: 20px;
     color: #000000;
 }
 
+/* Imágenes de personajes del jugador y enemigo */
 #imagen-personaje-jugador,
 #imagen-personaje-enemigo {
     display: inline-block;
-    width: 150px; /* Aumentado para mejor visibilidad */
+    width: 150px;
     text-align: center;
-    margin-bottom: 20px; /* Aumentado para mayor espaciado */
+    margin-bottom: 20px;
 }
 
+/* Imágenes dentro de los contenedores de personajes */
 #imagen-personaje-jugador img,
 #imagen-personaje-enemigo img {
     width: 100%;
     border-radius: 50%;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
+/* Botones de ataque */
 #botones-ataque {
     display: inline-block;
     vertical-align: top;
-    margin: 0 20px; /* Aumentado para mayor espaciado */
+    margin: 0 20px;
 }
 
+/* Etiquetas (labels) */
 label {
     display: block;
     cursor: pointer;
-    margin-bottom: 10px; /* Aumentado para mayor espaciado */
+    margin-bottom: 10px;
 }
 
+/* Estilos para botones */
 button {
     background-color: #73b5db;
     color: #000000;
-    padding: 12px 24px; /* Aumentado para mayor área clicable */
+    padding: 12px 24px;
     border: none;
-    border-radius: 12px; /* Aumentado para mayor suavidad en los bordes */
+    border-radius: 12px;
     cursor: pointer;
-    margin: 10px; /* Aumentado para mayor espaciado */
-    font-size: 1.2em; /* Aumentado para mejor visibilidad */
+    margin: 10px;
+    font-size: 1.2em;
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
+/* Efecto de hover para botones */
 button:hover {
     background-color: #8090d7;
-    transform: translateY(-2px); /* Efecto de hover más notorio */
+    transform: translateY(-2px);
 }
 
+/* Estilos para párrafos */
 p {
-    margin-bottom: 15px; /* Aumentado para mayor espaciado */
+    margin-bottom: 15px;
 }
 
+/* Estilos para la sección de mensajes */
 #mensajes {
-    background-color: (253, 253, 253, 0.5); /* Fondo más visible */
-    padding: 15px; /* Aumentado para mayor espaciado */
-    border-radius: 12px; /* Aumentado para mayor suavidad en los bordes */
-    margin-top: 15px; /* Aumentado para mayor espaciado */
+    background-color: rgba(253, 253, 253, 0.5);
+    padding: 15px;
+    border-radius: 12px;
+    margin-top: 15px;
     text-align: center;
     color: #000000;
 }
 
+/* Estilos para el botón de reinicio */
 #reiniciar {
     text-align: center;
-    margin-top: 20px; /* Aumentado para mayor espaciado */
+    margin-top: 20px;
 }
 
+/* Estilos para pantallas pequeñas (tablets) */
 @media (max-width: 768px) {
     .container {
-        padding: 15px; /* Ajustado para mantener espaciado adecuado */
+        padding: 15px;
         box-shadow: none;
     }
 
     .titulo-imagen {
-        width: 60%; /* Ajustado para mejor visibilidad en pantallas más pequeñas */
-        margin-bottom: 15px; /* Ajustado para mantener espaciado adecuado */
+        width: 60%;
+        margin-bottom: 15px;
     }
 
     h2 {
-        font-size: 1.5em; /* Ajustado para pantallas más pequeñas */
+        font-size: 1.5em;
     }
 
     .personaje-imagen {
-        width: 120px; /* Ajustado para pantallas más pequeñas */
-        height: 120px; /* Ajustado para pantallas más pequeñas */
+        width: 120px;
+        height: 120px;
     }
 
     #botones-ataque {
-        margin: 0 15px; /* Ajustado para pantallas más pequeñas */
+        margin: 0 15px;
     }
 
     button {
-        padding: 10px 20px; /* Ajustado para pantallas más pequeñas */
-        font-size: 1em; /* Ajustado para pantallas más pequeñas */
+        padding: 10px 20px;
+        font-size: 1em;
     }
 }
 
+/* Estilos para pantallas  pequeñas (móviles) */
 @media (max-width: 480px) {
     h2 {
-        font-size: 1.2em; /* Ajustado para pantallas más pequeñas */
+        font-size: 1.2em;
     }
 
     .personaje-imagen {
-        width: 100px; /* Ajustado para pantallas más pequeñas */
-        height: 100px; /* Ajustado para pantallas más pequeñas */
+        width: 100px;
+        height: 100px;
     }
 
     button {
-        padding: 8px 16px; /* Ajustado para pantallas más pequeñas */
-        font-size: 1em; /* Ajustado para pantallas más pequeñas */
+        padding: 8px 16px;
+        font-size: 1em;
     }
 
     .container {
-        padding: 10px; /* Ajustado para pantallas más pequeñas */
+        padding: 10px;
     }
 }
