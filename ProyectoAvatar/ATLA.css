@@ -1,45 +1,47 @@
-/* Estilos generales */
 body {
-    font-family: Arial, sans-serif;
-    line-height: 2;
+    font-family: 'Poppins', Arial, sans-serif;
+    line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #f2f2f2;
+    background-image: url('imagenes/fondo.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; 
 }
 
 .container {
-    max-width: 800px;
-    padding: 20px;
+    max-width: 90%;
+    padding: 20px; /* Aumentado para mayor espaciado */
     text-align: center;
     margin: auto;
+    border-radius: 12px; /* Aumentado para mayor suavidad en los bordes */
+    box-shadow: 0 6px 12px rgba(245, 243, 243, 0.15); /* Sombra más pronunciada */
 }
 
-h1 {
-    font-size: 2em;
-    margin-top: 20px;
+.titulo-imagen {
+    width: 40%; /* Aumentado para mejor visibilidad */
+    height: auto;
+    margin-bottom: 20px; /* Aumentado para mayor espaciado */
 }
 
 h2 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
+    font-size: 2.5em; /* Aumentado para mejor visibilidad */
+    margin-bottom: 20px; /* Aumentado para mayor espaciado */
+    color: #000000;
 }
 
-h4 {
-    font-size: 1.2em;
-    margin-bottom: 5px;
-}
 
 section {
-    background-color: #fff;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: rgba(253, 253, 253, 0.5); /* Fondo más visible */
+    padding: 20px; /* Aumentado para mayor espaciado */
+    margin-bottom: 20px; /* Aumentado para mayor espaciado */
+    border-radius: 12px; /* Aumentado para mayor suavidad en los bordes */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Sombra más pronunciada */
     text-align: left;
 }
 
 section#reglas-del-juego {
-    display: none; /* Ocultar las reglas por defecto */
+    display: none;
 }
 
 section#Inicio {
@@ -50,87 +52,147 @@ section#Inicio {
 }
 
 #Inicio button {
-    margin: 10px;
+    margin: 15px; /* Aumentado para mayor espaciado */
 }
 
 #seleccionar-personaje {
     text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .personaje-imagen {
-    width: 120px;
-    height: 120px;
+    width: 150px; /* Aumentado para mejor visibilidad */
+    height: 150px; /* Aumentado para mejor visibilidad */
     border-radius: 50%;
-    margin-bottom: 10px;
+    margin: 15px; /* Aumentado para mayor espaciado */
     cursor: pointer;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .personaje-imagen:hover {
-    transform: scale(1.1);
+    transform: scale(1.1); /* Aumento más notable al pasar el cursor */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
 }
 
-/* Estilos para la sección seleccionar-ataque */
 #seleccionar-ataque {
     text-align: center;
 }
 
 #seleccionar-ataque h2 {
-    margin-bottom: 20px;
+    margin-bottom: 20px; /* Aumentado para mayor espaciado */
+    color: #000000;
 }
 
 #imagen-personaje-jugador,
 #imagen-personaje-enemigo {
     display: inline-block;
-    width: 150px;
+    width: 150px; /* Aumentado para mejor visibilidad */
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 20px; /* Aumentado para mayor espaciado */
 }
 
 #imagen-personaje-jugador img,
 #imagen-personaje-enemigo img {
     width: 100%;
-    border-radius: 50%; /* Para imágenes redondas si es necesario */
+    border-radius: 50%;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada */
 }
 
 #botones-ataque {
     display: inline-block;
     vertical-align: top;
-    margin: 0 20px;
+    margin: 0 20px; /* Aumentado para mayor espaciado */
 }
 
 label {
     display: block;
     cursor: pointer;
+    margin-bottom: 10px; /* Aumentado para mayor espaciado */
 }
 
 button {
-    background-color: #37B7C3;
-    color: white;
-    padding: 10px 20px;
+    background-color: #73b5db;
+    color: #000000;
+    padding: 12px 24px; /* Aumentado para mayor área clicable */
     border: none;
-    border-radius: 5px;
+    border-radius: 12px; /* Aumentado para mayor suavidad en los bordes */
     cursor: pointer;
-    margin: 5px;
-    font-size: 1em;
+    margin: 10px; /* Aumentado para mayor espaciado */
+    font-size: 1.2em; /* Aumentado para mejor visibilidad */
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 button:hover {
-    background-color: #088395;
+    background-color: #8090d7;
+    transform: translateY(-2px); /* Efecto de hover más notorio */
 }
 
 p {
-    margin-bottom: 10px;
+    margin-bottom: 15px; /* Aumentado para mayor espaciado */
 }
 
 #mensajes {
-    background-color: #f0f0f0;
-    padding: 10px;
-    border-radius: 5px;
-    margin-top: 10px;
+    background-color: (253, 253, 253, 0.5); /* Fondo más visible */
+    padding: 15px; /* Aumentado para mayor espaciado */
+    border-radius: 12px; /* Aumentado para mayor suavidad en los bordes */
+    margin-top: 15px; /* Aumentado para mayor espaciado */
     text-align: center;
+    color: #000000;
 }
 
 #reiniciar {
     text-align: center;
+    margin-top: 20px; /* Aumentado para mayor espaciado */
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 15px; /* Ajustado para mantener espaciado adecuado */
+        box-shadow: none;
+    }
+
+    .titulo-imagen {
+        width: 60%; /* Ajustado para mejor visibilidad en pantallas más pequeñas */
+        margin-bottom: 15px; /* Ajustado para mantener espaciado adecuado */
+    }
+
+    h2 {
+        font-size: 1.5em; /* Ajustado para pantallas más pequeñas */
+    }
+
+    .personaje-imagen {
+        width: 120px; /* Ajustado para pantallas más pequeñas */
+        height: 120px; /* Ajustado para pantallas más pequeñas */
+    }
+
+    #botones-ataque {
+        margin: 0 15px; /* Ajustado para pantallas más pequeñas */
+    }
+
+    button {
+        padding: 10px 20px; /* Ajustado para pantallas más pequeñas */
+        font-size: 1em; /* Ajustado para pantallas más pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+    h2 {
+        font-size: 1.2em; /* Ajustado para pantallas más pequeñas */
+    }
+
+    .personaje-imagen {
+        width: 100px; /* Ajustado para pantallas más pequeñas */
+        height: 100px; /* Ajustado para pantallas más pequeñas */
+    }
+
+    button {
+        padding: 8px 16px; /* Ajustado para pantallas más pequeñas */
+        font-size: 1em; /* Ajustado para pantallas más pequeñas */
+    }
+
+    .container {
+        padding: 10px; /* Ajustado para pantallas más pequeñas */
+    }
 }
