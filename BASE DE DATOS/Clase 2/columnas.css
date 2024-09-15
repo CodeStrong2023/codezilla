@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+/* Contenedor principal */
+.contenedor {
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Estilos para las filas */
+.fila {
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden; 
+    display: flex; 
+}
+
+/* Estilos para las columnas */
+[class*="col-"] {
+    padding: 10px; 
+    border: 1px solid black; 
+}
+
+/* Columnas para el layout */
+.col-2 {
+    height: 100px;
+    width: 20%;
+}
+
+.col-4 {
+    height: 100px;
+    width: 33.3333%;
+}
+
+.col-6 {
+    height: 100px;
+    width: 50%;
+}
+
+.col-12 {
+    height: 100px;
+    width: 100%;
+}
+
+.fila > [class*="col-"] {
+    box-sizing: border-box; 
+}
