@@ -1,0 +1,201 @@
+/* Products styles */
+.card-products-container {
+   margin: 5vh auto;
+}
+
+.card-products {
+   text-align: center;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-around;
+   flex-wrap: wrap;
+}
+
+.card-products img {
+   margin-top: 40px;
+   width: 250px;
+   height: 250px;
+}
+
+.card-products button {
+   border: none;
+   outline: 0;
+   padding: 10px;
+   color: white;
+   background-color: #1bcb7f;
+   text-align: center;
+   cursor: pointer;
+   width: 100%;
+   font-size: 15px;
+}
+
+.card-products button:hover {
+   opacity: 0.7;
+}
+
+/* Cart button */
+.cart-btn {
+   position: fixed;
+   top: 90vh;
+   right: 40px;
+   background-color: rgb(25, 25, 25);
+   padding: 10px;
+   border-radius: 50%;
+   height: 25px;
+   width: 25px;
+   transition: transform 0.2s ease-in-out;
+}
+
+.cart-btn:hover {
+   cursor: pointer;
+   opacity: 0.9;
+}
+
+/* Modal */
+.modal-overlay {
+   display: none;
+   background-color: rgba(0, 0, 0, 0.5);
+   position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   z-index: 10;
+}
+
+/* Modal container */
+.modal-container {
+   display: none;
+   background-color: #ffffff;
+   box-shadow: 0px 3px 6px #000000;
+   padding: 40px;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   max-width: 500px;
+   width: 100%;
+   max-height: 88vh;
+   overflow-y: auto;
+   z-index: 20;
+}
+
+/* Scrollbar hidden for modal container */
+.modal-container::-webkit-scrollbar {
+   display: none;
+}
+
+/* Modal close button */
+.modal-close {
+   float: right;
+   font-size: 24px;
+   cursor: pointer;
+}
+
+/* Modal title */
+.modal-title {
+   font-size: 24px;
+   font-weight: bold;
+   margin: 20px; /* Corregido */
+   text-align: center;
+}
+
+/* Modal body */
+.modal-body {
+   margin-bottom: 20px;
+   text-align: center;
+}
+
+/* Product */
+.product {
+   display: flex;
+   align-items: center;
+   justify-content: space-around;
+   margin-bottom: 20px;
+}
+
+/* Product image */
+.product-img {
+   height: 80px;
+   width: 80px;
+   margin-right: 20px;
+}
+
+/* Product info */
+.product-info {
+   flex: 1;
+   text-align: left;
+}
+
+/* Product info title */
+.product-info h4 {
+   margin-top: 35px;
+}
+
+/* Quantity */
+.quantity {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin-top: 10px;
+   margin-right: 4em;
+}
+
+/* Quantity buttons */
+.quantity-btn-decrease, 
+.quantity-btn-increase {
+    color: #333333;
+    cursor: pointer;
+    font-size: 16px;
+    width: 28px;
+    font-weight: bold;
+}
+
+/* Quantity input */
+.quantity-input {
+    color: #333333;
+    font-size: 16px;
+    padding: 10px 10px;
+    text-align: center;
+    width: 50px;
+    font-weight: bold;
+}
+
+/* Product image responsive */
+@media only screen and (max-width: 500px) {
+    .product-img {
+        display: none;
+    }
+
+    .modal-body {
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+}
+
+/* Price */
+.price {
+   font-size: 20px;
+   font-weight: bold;
+   margin-top: 28px;
+}
+
+/* Delete product */
+.delete-product {
+   margin-top: 20px;
+   margin-left: 2em;
+   cursor: pointer;
+}
+
+/* Modal footer */
+.modal-footer {
+   text-align: center;
+}
+
+/* Total price */
+.total-price {
+   font-size: 20px;
+   font-weight: bold;
+   margin-top: 28px;
+   margin-bottom: 10px;
+}
