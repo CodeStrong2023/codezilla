@@ -1,0 +1,276 @@
+/* Reset y estilos generales */
+body {
+    background: #f2eaff;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 20px;
+    margin: 10px;
+    padding: 10px;
+  }
+  
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Estilos para el chat */
+  #chat {
+    position: fixed;
+    width: 250px;
+    height: 40px;
+    bottom: 0;
+    right: 20px;
+    background: #615efc;
+    z-index: 1;
+    color: white;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 20px 20px 0 0;
+    cursor: pointer;
+    font-size: 20px;
+  }
+  
+  /* Estilos para el encabezado */
+  .header {
+    width: 100%;
+    max-width: 1100px;
+    margin: 20px auto;
+    padding: 0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* Estilos para el logo */
+  .logo {
+    font-family: "Playwrite ES Deco", cursive;
+    font-size: 36px;
+    text-align: center;
+  }
+
+  /* Estilos específicos para cada icono */
+#icono1 {
+    background: #615efc;
+  }
+  
+  #icono2 {
+    background: #7e8ef1;
+  }
+  
+  #icono3 {
+    background: #d1d8c5;
+  }
+
+  /* Estilos para los iconos sociales */
+  .social-icons {
+    position: relative;
+  }
+  
+  .redes {
+    width: 42px;
+    height: 42px;
+    background: #7e8ef1;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 42px;
+    color: white;
+    display: inline-block;
+    margin-left: 10px;
+  }
+  
+  /* Estilos para la navegación */
+  .navigation {
+    width: 100%;
+    max-width: 1100px;
+    margin: 10px auto;
+    padding: 15px 0;
+  }
+  
+  .nav-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .nav-button {
+    text-decoration: none;
+    color: #312eb1;
+    text-align: center;
+    padding: 10px 5px;
+    background-color: #7e8ef1;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .nav-button:hover {
+    background-color: #af7af0;
+    color: #462765;
+    transform: scale(1.05);
+  }
+  
+  .nav-button.active {
+    background-color: #615efc;
+    color: white;
+  }
+  
+  /* Estilos para la sección superior */
+  .top-section {
+    max-width: 1010px;
+    margin: 20px auto;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .top-item {
+    flex: 30%;
+    margin: 10px;
+    text-align: center;
+  }
+  
+  .top-image {
+    width: 250px;
+    height: auto;
+    border-radius: 50%;
+  }
+  
+  .top-item h2 {
+    font-size: 25px;
+    margin: 10px 0;
+  }
+  
+  /* Estilos para la sección de contenido principal */
+  section {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1010px;
+    margin: 20px auto;
+    flex-wrap: wrap;
+  }
+  
+  aside {
+    width: 200px;
+    padding: 10px;
+    background-color: #615efc;
+    color: #fff;
+    border-radius: 5px;
+    margin: 10px;
+  }
+  
+  article {
+    flex: 1;
+    padding: 10px;
+    margin: 10px;
+  }
+  
+  article img {
+    float: left;
+    margin-right: 15px;
+    border-radius: 5px;
+  }
+  
+  aside.right {
+    text-align: center;
+  }
+  
+  aside.right input {
+    margin: 5px 0;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  aside.right input[type="submit"] {
+    background-color: #7e8ef1;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  aside.right input[type="submit"]:hover {
+    background-color: #d1d8c5;
+  }
+  
+  /* Estilos para el pie de página */
+  footer {
+    text-align: center;
+    background-color: #615efc;
+    color: #fff;
+    line-height: 70px;
+    max-width: 1010px;
+    margin: 20px auto;
+    border-radius: 5px;
+  }
+  
+  /* Media query para dispositivos móviles */
+  @media (max-width: 768px) {
+    .header {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .social-icons {
+      margin-top: 10px;
+    }
+  
+    .nav-list {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      padding: 0;
+      list-style: none;
+    }
+  
+    .nav-list li {
+      margin: 5px 0;
+      width: 100%;
+    }
+  
+    .nav-button {
+      display: block;
+      text-align: center;
+      padding: 15px;
+      background-color: #7e8ef1;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+  
+    .top-section {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .top-item {
+      margin: 10px 0;
+      width: 100%;
+    }
+  
+    .top-image {
+      width: 80%;
+      height: auto;
+    }
+  
+    section {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  
+    aside {
+      width: 100%;
+      margin: 10px 0;
+    }
+  
+    article {
+      width: 100%;
+      margin: 10px 0;
+    }
+  
+    footer {
+      padding: 20px 0;
+    }
+  }  
