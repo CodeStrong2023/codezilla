@@ -1,240 +1,259 @@
 /* Definir la fuente */
 @font-face {
-    font-family: 'papyrus';
-    src: url('papyrus-font/papyrus.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+  font-family: "herculanum";
+  src: url("/herculanum/herculanum.woff") format("woff"), url("/herculanum/herculanum.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
 
 /* Estilos generales para el cuerpo de la página */
 body {
-    font-family: 'papyrus', Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 1.5em;
-    line-height: 2;
-    margin: 0;
-    padding: 0;
-    background-image: url('imagenes/fondo.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+  font-family: "herculanum", Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.5em;
+  line-height: 2;
+  margin: 0;
+  padding: 0;
+  background-image: url("imagenes/fondo.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 /* Contenedor principal */
 .container {
-    max-width: 90%;
-    padding: 20px;
-    text-align: center;
-    margin: auto;
+  max-width: 90%;
+  padding: 20px;
+  text-align: center;
+  margin: auto;
 }
 
 /* Imagen del título */
 .titulo-imagen-grande {
-    width: 60%;
-    height: auto;
-    margin: 0 auto 20px auto;
-    display: block;
+  width: 60%;
+  height: auto;
+  margin: 0 auto 20px auto;
+  display: block;
 }
 
 .titulo-imagen-pequena {
-    width: 30%;
-    height: auto;
-    margin: 0 auto 20px auto;
-    display: block;
+  width: 30%;
+  height: auto;
+  margin: 0 auto 20px auto;
+  display: block;
 }
 
 /* Estilos para los botones dentro de 'Inicio' */
 .button-comenzar {
-    font-family: 'papyrus', sans-serif;
-    background-color: #e0c28e;
-    color: #000000;
-    padding: 20px 40px;
-    border-radius: 12px;
-    cursor: pointer;
-    font-size: 1.2em;
-    margin: 20px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    transform: scale(1.1);
+  font-family: "herculanum", Verdana, Geneva, Tahoma, sans-serif;
+  background-color: #e0c28e;
+  color: #000000;
+  padding: 20px 40px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 1.2em;
+  margin: 20px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  transform: scale(1.1);
 }
 
 /* Encabezados h2 */
 h2 {
-    font-family: 'papyrus', sans-serif;
-    font-size: 1em;
-    margin-bottom: 20px;
-    color: #000000;
+  font-family: "herculanum", Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1em;
+  margin-bottom: 20px;
+  color: #000000;
 }
 
 /* Estilos para secciones */
 section {
-    background-color: rgba(224, 194, 142, 0.5);
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 12px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-    text-align: center;
+  background-color: rgba(224, 194, 142, 0.5);
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
 
 /* Estilos para la sección de inicio */
 section#menu-principal {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 /* Estilo para el botón al pasar el cursor */
 .button-comenzar:hover {
-    background-color: #a3875e;
-    transform: scale(1.15);
+  background-color: #a3875e;
+  transform: scale(1.15);
 }
 
 /* Estilos para los personajes */
 #seleccionar-personaje {
-    text-align: center;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-left: 150px;
+  padding-right: 150px;
+}
+
+/* Estilo para el mensaje personalizado */
+#mensaje-personalizado {
+  font-size: 1.2em;
+  color: #000000;
+  margin-bottom: 20px;
+  height: 80px; /* Para mantener un espacio fijo incluso cuando no haya mensaje */
+  transition: opacity 0.3s ease;
 }
 
 /* Imágenes de los personajes */
 .personaje-imagen {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    margin: 15px;
-    cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin: 15px;
+  cursor: pointer;
 }
 
+.personaje-imagen.seleccionado {
+    transform: scale(1.1); /* Mantiene el tamaño agrandado */
+  }
+  
+
 .personaje-imagen:hover {
-    transform: scale(1.1);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transform: scale(1.1);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 /* Estilos para la sección de selección de ataque */
 #seleccion-ataque {
-    text-align: center;
+  text-align: center;
 }
 
 /* Contenedor para los personajes en combate */
 .combate-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
 /* Contenedor de imágenes de personajes */
 .personaje-container {
-    display: flex;
-    justify-content: space-between;
-    width: 60%;
-    margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+  margin: 0 auto;
 }
 
 /* Imágenes de personajes en combate */
 .personaje-combate {
-    width: 100px; /* Tamaño reducido */
-    height: auto;
-    margin: 0 20px;
+  width: 100px; /* Tamaño reducido */
+  height: auto;
+  margin: 0 20px;
 }
 
 /* Estilos para los botones de ataque */
 .ataque-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .ataque-imagen {
-    width: 80px; /* Tamaño reducido para botones de ataque */
-    height: auto;
-    margin: 0 10px;
+  width: 80px; /* Tamaño reducido para botones de ataque */
+  height: auto;
+  margin: 0 10px;
 }
 
 /* Estilos para la sección de mensajes */
 #mensajes {
-    background-color: rgba(253, 253, 253, 0.5);
-    padding: 15px;
-    border-radius: 12px;
-    margin-top: 15px;
-    text-align: center;
-    color: #000000;
+  background-color: rgba(253, 253, 253, 0.5);
+  padding: 15px;
+  border-radius: 12px;
+  margin-top: 15px;
+  text-align: center;
+  color: #000000;
 }
 
 /* Estilos para los botones de ataque */
 button {
-    background-color: #a3875e;
-    color: #000000;
-    padding: 12px 24px;
-    border: none;
-    border-radius: 12px;
-    cursor: pointer;
-    margin: 10px;
-    font-size: 1.2em;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+  background-color: #a3875e;
+  color: #000000;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  margin: 10px;
+  font-size: 1.2em;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 button:hover {
-    background-color: #8090d7;
-    transform: translateY(-2px);
+  background-color: #8090d7;
+  transform: translateY(-2px);
 }
 
 /* Estilos para párrafos */
 p {
-    margin-bottom: 15px;
+  margin-bottom: 15px;
 }
 
 /* Estilos para el botón de reinicio */
 #reiniciar {
-    text-align: center;
-    margin-top: 20px;
+  text-align: center;
+  margin-top: 20px;
 }
 
 /* Estilos para pantallas pequeñas (tablets) */
 @media (max-width: 768px) {
-    .container {
-        padding: 15px;
-        box-shadow: none;
-    }
+  .container {
+    padding: 15px;
+    box-shadow: none;
+  }
 
-    .titulo-imagen {
-        width: 60%;
-        margin-bottom: 15px;
-    }
+  .titulo-imagen {
+    width: 60%;
+    margin-bottom: 15px;
+  }
 
-    h2 {
-        font-size: 1.5em;
-    }
+  h2 {
+    font-size: 1.5em;
+  }
 
-    .personaje-imagen {
-        width: 120px;
-        height: 120px;
-    }
+  .personaje-imagen {
+    width: 120px;
+    height: 120px;
+  }
 
-    button {
-        padding: 10px 20px;
-        font-size: 1em;
-    }
+  button {
+    padding: 10px 20px;
+    font-size: 1em;
+  }
+
+  #seleccionar-personaje {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
 }
 
 /* Estilos para pantallas pequeñas (móviles) */
 @media (max-width: 480px) {
-    h2 {
-        font-size: 1.2em;
-    }
+  h2 {
+    font-size: 1.2em;
+  }
 
-    .personaje-imagen {
-        width: 100px;
-        height: 100px;
-    }
+  .personaje-imagen {
+    width: 100px;
+    height: 100px;
+  }
 
-    button {
-        padding: 8px 16px;
-        font-size: 1em;
-    }
+  button {
+    padding: 8px 16px;
+    font-size: 1em;
+  }
 
-    .container {
-        padding: 10px;
-    }
+  .container {
+    padding: 10px;
+  }
 }

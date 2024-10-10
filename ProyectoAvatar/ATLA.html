@@ -1,90 +1,228 @@
 <!DOCTYPE html>
 <html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AVATAR: LA LEYENDA DE AANG</title>
-    <link rel="icon" href="imagenes/icon.png" type="image/png">
-    <link rel="stylesheet" href="ATLA.css">
+    <link rel="icon" href="imagenes/icon.png" type="image/png" />
+    <link rel="stylesheet" href="ATLA.css" />
     <script src="ATLA.js" defer></script>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <div class="container">
+      <!-- Sección: Inicio -->
+      <img
+        src="imagenes/titulo.png"
+        alt="Título"
+        class="titulo-imagen titulo-imagen-grande"
+        id="titulo-imagen"
+      />
 
-        <!-- Sección: Inicio -->
-        <img src="imagenes/titulo.png" alt="Título" class="titulo-imagen titulo-imagen-grande" id="titulo-imagen">
+      <section id="menu-principal">
+        <button id="boton-reglas" class="button-comenzar">
+          <strong>CONTINUAR</strong>
+        </button>
+      </section>
 
-        <section id="menu-principal">
-            <button id="boton-reglas" class="button-comenzar"><strong>CONTINUAR</strong></button>
+      <!-- Sección: Reglas del Juego -->
+      <section id="reglas-del-juego">
+        <p>
+          <strong
+            >Elige un personaje y comienza el combate. Ganas si reduces las
+            vidas del enemigo a cero.</strong
+          >
+        </p>
+        <p>
+          <strong
+            >Combate: Golpe vence Gancho - Patada vence Golpe - Gancho vence
+            Patada</strong
+          >
+        </p>
+        <button id="boton-jugar" class="button-comenzar">
+          <strong>CONTINUAR</strong>
+        </button>
+      </section>
+
+      <!-- Sección: Selección de Personaje -->
+      <section id="seleccionar-personaje">
+        <div>
+          <h2>ELIGE A TU PERSONAJE</h2>
+          <p id="mensaje-personalizado"></p>
+          <!-- Contenedor para el mensaje -->
+
+          <label for="zuko">
+            <img
+              src="imagenes/zuko.png"
+              alt="Zuko"
+              class="personaje-imagen"
+              data-mensaje="Zuko, príncipe del fuego, rey de las crisis existenciales."
+            />
+          </label>
+          <input
+            type="radio"
+            name="personaje"
+            id="zuko"
+            style="display: none"
+          />
+
+          <label for="katara">
+            <img
+              src="imagenes/katara.png"
+              alt="Katara"
+              class="personaje-imagen"
+              data-mensaje="Katara, guerrera y sanadora ¡No subestimes a quien puede herir y curar al mismo tiempo!"
+            />
+          </label>
+          <input
+            type="radio"
+            name="personaje"
+            id="katara"
+            style="display: none"
+          />
+
+          <label for="aang">
+            <img
+              src="imagenes/aang.png"
+              alt="Aang"
+              class="personaje-imagen"
+              data-mensaje="Aang, rey de la compasión, pero meterse con Appa es como pedir un tornado en la cara."
+            />
+          </label>
+          <input
+            type="radio"
+            name="personaje"
+            id="aang"
+            style="display: none"
+          />
+
+          <label for="toph">
+            <img
+              src="imagenes/toph.png"
+              alt="Toph"
+              class="personaje-imagen"
+              data-mensaje="Toph, ella no necesita ver el peligro; ¡el peligro es quien se aleja de ella!"
+            />
+          </label>
+          <input
+            type="radio"
+            name="personaje"
+            id="toph"
+            style="display: none"
+          />
+
+          <!-- Nuevos personajes -->
+          <label for="azula">
+            <img
+              src="imagenes/azula.png"
+              alt="Azula"
+              class="personaje-imagen"
+              data-mensaje="Azula, su rayo puede quemarte, pero sus comentarios te dejarán en cenizas."
+            />
+          </label>
+          <input
+            type="radio"
+            name="personaje"
+            id="azula"
+            style="display: none"
+          />
+
+          <label for="iroh">
+            <img
+              src="imagenes/iroh.png"
+              alt="Iroh"
+              class="personaje-imagen"
+              data-mensaje="Iroh, aprecia la paz y la tranquilidad, pero arruinar su té es como declarar la guerra."
+            />
+          </label>
+          <input
+            type="radio"
+            name="personaje"
+            id="iroh"
+            style="display: none"
+          />
+
+          <label for="suki">
+            <img
+              src="imagenes/suki.png"
+              alt="Suki"
+              class="personaje-imagen"
+              data-mensaje="Suki, porque no necesitas poderes para ser épica."
+            />
+          </label>
+          <input
+            type="radio"
+            name="personaje"
+            id="suki"
+            style="display: none"
+          />
+
+          <label for="sokka">
+            <img
+              src="imagenes/sokka.png"
+              alt="Sokka"
+              class="personaje-imagen"
+              data-mensaje="Sokka, No necesita poderes, solo un bumerán y su ingenio afilado."
+            />
+          </label>
+          <input
+            type="radio"
+            name="personaje"
+            id="sokka"
+            style="display: none"
+          />
+        </div>
+        <button id="boton-personaje" class="button-comenzar">
+          <strong>SELECCIONAR</strong>
+        </button>
+      </section>
+
+      <!-- Sección: Selección de Ataque -->
+      <section id="seleccion-ataque">
+        <h2>Elige tu ataque</h2>
+        <p>
+          Tu personaje <span id="personaje-jugador"></span> tiene
+          <span id="vidas-jugador">3</span> vidas - El enemigo
+          <span id="personaje-enemigo"></span> tiene
+          <span id="vidas-enemigo">3</span> vidas
+        </p>
+        <div class="combate-container">
+          <img
+            id="imagen-personaje-jugador"
+            src=""
+            alt="Personaje Jugador"
+            class="personaje-combate"
+          />
+          <button id="boton-golpe" aria-label="Golpe">
+            <img src="imagenes/golpe.png" alt="Golpe" class="ataque-imagen" />
+          </button>
+          <button id="boton-patada" aria-label="Patada">
+            <img src="imagenes/patada.png" alt="Patada" class="ataque-imagen" />
+          </button>
+          <button id="boton-gancho" aria-label="Gancho">
+            <img src="imagenes/gancho.png" alt="Gancho" class="ataque-imagen" />
+          </button>
+          <img
+            id="imagen-personaje-enemigo"
+            src=""
+            alt="Personaje Enemigo"
+            class="personaje-combate"
+          />
+        </div>
+        <section id="mensajes">
+          <!-- Aquí se mostrarán los mensajes de combate -->
         </section>
+      </section>
 
-        <!-- Sección: Reglas del Juego -->
-        <section id="reglas-del-juego">
-            <p><strong>Elige un personaje y comienza el combate. Ganas si reduces las vidas del enemigo a cero.</strong>
-            </p>
-            <p><strong>Combate: Golpe vence Gancho - Patada vence Golpe - Gancho vence Patada</strong></p>
-            <button id="boton-jugar" class="button-comenzar"><strong>CONTINUAR</strong></button>
-        </section>
-
-        <!-- Sección: Selección de Personaje -->
-        <section id="seleccionar-personaje">
-            <div>
-                <h2>ELIGE A TU PERSONAJE</h2>
-                <label for="zuko">
-                    <img src="imagenes/zuko.png" alt="Zuko" class="personaje-imagen">
-                </label>
-                <input type="radio" name="personaje" id="zuko" style="display: none;">
-
-                <label for="katara">
-                    <img src="imagenes/katara.png" alt="Katara" class="personaje-imagen">
-                </label>
-                <input type="radio" name="personaje" id="katara" style="display: none;">
-
-                <label for="aang">
-                    <img src="imagenes/aang.png" alt="Aang" class="personaje-imagen">
-                </label>
-                <input type="radio" name="personaje" id="aang" style="display: none;">
-
-                <label for="toph">
-                    <img src="imagenes/toph.png" alt="Toph" class="personaje-imagen">
-                </label>
-                <input type="radio" name="personaje" id="toph" style="display: none;">
-            </div>
-            <button id="boton-personaje" class="button-comenzar"><strong>SELECCIONAR</strong></button>
-        </section>
-
-        <!-- Sección: Selección de Ataque -->
-        <section id="seleccion-ataque">
-            <h2>Elige tu ataque</h2>
-            <p>Tu personaje <span id="personaje-jugador"></span> tiene <span id="vidas-jugador">3</span> vidas - El
-                enemigo <span id="personaje-enemigo"></span> tiene <span id="vidas-enemigo">3</span> vidas</p>
-            <div class="combate-container">
-                <img id="imagen-personaje-jugador" src="" alt="Personaje Jugador" class="personaje-combate">
-                <button id="boton-golpe" aria-label="Golpe">
-                    <img src="imagenes/golpe.png" alt="Golpe" class="ataque-imagen">
-                </button>
-                <button id="boton-patada" aria-label="Patada">
-                    <img src="imagenes/patada.png" alt="Patada" class="ataque-imagen">
-                </button>
-                <button id="boton-gancho" aria-label="Gancho">
-                    <img src="imagenes/gancho.png" alt="Gancho" class="ataque-imagen">
-                </button>
-                <img id="imagen-personaje-enemigo" src="" alt="Personaje Enemigo" class="personaje-combate">
-
-            </div>
-            <section id="mensajes">
-                <!-- Aquí se mostrarán los mensajes de combate -->
-            </section>
-        </section>
-
-        <!-- Sección: Reiniciar Juego -->
-        <section id="reiniciar">
-            <button id="boton-reiniciar" class="button-comenzar"><strong>REINICIAR</strong></button>
-        </section>
+      <!-- Sección: Reiniciar Juego -->
+      <section id="reiniciar">
+        <p id="mensaje-resultado" style="display: none"></p>
+        <!-- Mensaje de resultado -->
+        <p id="mensaje-reinicio" style="display: none"></p>
+        <button id="boton-reiniciar" class="button-comenzar">
+          <strong>REINICIAR</strong>
+        </button>
+      </section>
     </div>
-</body>
-
+  </body>
 </html>
