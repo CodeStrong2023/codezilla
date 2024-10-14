@@ -1,0 +1,123 @@
+/* main.css */
+
+/* Estilos generales del cuerpo */
+body {
+  margin: 0; /* Sin margen */
+  font-family: 'Montserrat', sans-serif; /* Fuente */
+}
+
+/* Estilos para la sección de categorías */
+#categorias {
+  padding: 20px; /* Espaciado interno */
+  display: flex; /* Alineación con flexbox */
+  justify-content: space-around; /* Espacio entre íconos */
+}
+
+/* Estilos para cada categoría */
+.categoria img {
+  max-width: 100px; /* Ancho máximo para las imágenes */
+  margin: 0 10px; /* Espaciado horizontal entre íconos */
+}
+
+/* Estilos para la sección de productos */
+#productos {
+  padding: 20px; /* Espaciado interno */
+  text-align: center; /* Alineación del texto */
+}
+
+/* Estilos para cada producto */
+.producto {
+  display: inline-block; /* Disposición en línea */
+  margin: 10px; /* Espaciado externo */
+}
+
+/* Estilos para las imágenes de productos */
+.producto img {
+  width: 150px; /* Ancho de la imagen */
+  height: auto; /* Mantener la relación de aspecto */
+}
+
+/* Estilos específicos para el contenedor principal */
+main {
+  padding: 20px; /* Espaciado interno */
+}
+
+/* Estilos para encabezados dentro de main */
+main h1 {
+  font-size: 2.5rem; /* Tamaño de fuente */
+  color: #333; /* Color del texto */
+}
+
+/* Estilos para párrafos dentro de main */
+main p {
+  font-size: 1.2rem; /* Tamaño de fuente */
+  line-height: 1.6; /* Altura de línea */
+}
+
+/* Estilos para categorías dentro de main */
+.categorias {
+  display: flex; /* Disposición en línea */
+  justify-content: space-around; /* Espacio entre categorías */
+  margin-bottom: 40px; /* Espaciado inferior */
+}
+
+/* Estilos para las imágenes de categorías */
+.categorias img {
+  width: 100px; /* Ancho de imagen */
+  height: 100px; /* Altura de imagen */
+  border-radius: 50%; /* Bordes redondeados */
+  border: 2px solid #ccc; /* Borde */
+}
+
+/* Estilos para productos dentro de main */
+.productos {
+  display: grid; /* Usar grid para disposición */
+  grid-template-columns: repeat(3, 1fr); /* Tres columnas de igual tamaño */
+  gap: 20px; /* Espacio entre productos */
+}
+
+/* Estilos para cada producto dentro de productos */
+.productos .producto {
+  background-color: white; /* Color de fondo */
+  border: 1px solid #ccc; /* Borde */
+  padding: 15px; /* Espaciado interno */
+  text-align: center; /* Alineación del texto */
+}
+
+/* Estilos para imágenes de productos dentro de productos */
+.productos .producto img {
+  width: 100%; /* Ancho completo */
+  height: auto; /* Mantener la relación de aspecto */
+}
+
+/* Estilos para títulos de productos */
+.productos .producto h3 {
+  font-size: 1.5rem; /* Tamaño de fuente */
+  margin: 10px 0; /* Espaciado vertical */
+}
+
+/* Estilos para párrafos de productos */
+.productos .producto p {
+  font-size: 1rem; /* Tamaño de fuente */
+}
+
+
+
+/* Estilos para el banner */
+#banner {
+  margin-top: 1%;
+  position: relative; /* Posicionamiento relativo para el carrusel */
+  height: 300px; /* Altura del carrusel */
+  overflow: hidden; /* Ocultar elementos que exceden el área */
+}
+
+.carousel-inner img {
+  width: 100%; /* Ancho completo */
+  height: 100%; /* Altura completa */
+  object-fit: cover; /* Mantiene la relación de aspecto de la imagen */
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 5%; /* Ancho de los controles */
+}
