@@ -3,6 +3,7 @@
 /* Estilos generales del cuerpo */
 body {
   margin: 0; /* Sin margen */
+  margin-top: 10%;
   font-family: 'Montserrat', sans-serif; /* Fuente */
 }
 
@@ -33,7 +34,7 @@ body {
 
 /* Estilos para las imágenes de productos */
 .producto img {
-  width: 150px; /* Ancho de la imagen */
+  width: 70%; /* Ancho de la imagen */
   height: auto; /* Mantener la relación de aspecto */
 }
 
@@ -105,9 +106,8 @@ main p {
 
 /* Estilos para el banner */
 #banner {
-  margin-top: 1%;
   position: relative; /* Posicionamiento relativo para el carrusel */
-  height: 300px; /* Altura del carrusel */
+  height: 100%; /* Altura del carrusel */
   overflow: hidden; /* Ocultar elementos que exceden el área */
 }
 

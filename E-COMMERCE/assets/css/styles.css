@@ -1,21 +1,32 @@
 /* styles.css */
-
 /* Estilos generales */
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
-/* Importación correcta de Montserrat */
+/* Importación de Montserrat */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
 /* Estilo general del cuerpo */
 body {
-  font-family: 'Montserrat', sans-serif; /* Fuente correcta */
+  font-family: 'Montserrat', sans-serif; /* Fuente */
   background-color: #EEEEEE; /* Color de fondo */
   color: #303841; /* Color de texto */
 }
+
+header {
+  position: fixed; /* Fija el header */
+  top: 0; /* Se sitúa en la parte superior de la ventana */
+  left: 0; /* Alineado a la izquierda */
+  width: 100%; /* Ancho completo */
+  z-index: 1000; /* Asegura que esté encima de otros elementos */
+  background-color: white; /* Fondo blanco para que se vea bien */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidad */
+}
+
 
 /* Estilos generales para el navbar */
 .navbar {
@@ -24,6 +35,10 @@ body {
   align-items: center; /* Centrar verticalmente */
   background-color: #7AA5D2; /* Color de fondo del navbar */
   padding: 10px 20px; /* Espaciado interno */
+}
+
+.navbar .container{
+  max-width: 100%;
 }
 
 /* Estilos para el logo */
@@ -37,19 +52,15 @@ body {
 .search-container {
   display: flex; /* Flexbox para alinear elementos */
   align-items: center; /* Centrar verticalmente */
-}
-
-.search-input {
+  color: #303841; /* Color del texto */
   padding: 5px; /* Espaciado interno */
-  border: 1px solid #ccc; /* Borde */
-  border-radius: 4px; /* Bordes redondeados */
-  margin-right: 5px; /* Espacio entre el input y el botón */
+  margin-right: 7px; /* Espacio entre el input y el botón */
 }
 
 .search-button {
   padding: 5px 10px; /* Espaciado interno */
   background-color: #303841; /* Color de fondo del botón */
-  color: white; /* Color del texto */
+  color: #7AA5D2; /* Color del texto */
   border: none; /* Sin borde */
   border-radius: 4px; /* Bordes redondeados */
   cursor: pointer; /* Cambiar cursor al pasar el mouse */
@@ -71,7 +82,7 @@ body {
 }
 
 .icon {
-  width: 50px; /* Ancho de los íconos */
+  width: 70px; /* Ancho de los íconos */
   height: auto; /* Mantener la relación de aspecto */
 }
 

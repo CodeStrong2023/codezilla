@@ -1,0 +1,13 @@
+/* user.css */
+
+/* Estilos generales del cuerpo */
+body {
+  margin: 0; /*Sin margen */
+  margin-top: 7%;
+  font-family: "Montserrat", sans-serif; /* Fuente */
+  padding-top: 70px; /* Para compensar el header fijo */
+}
+.sidebar {
+  height: 100vh;
+  background-color: #f8f9fa;
+}

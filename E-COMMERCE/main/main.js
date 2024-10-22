@@ -1,2 +1,2 @@
-// Funcionalidades dinámicas (filtros, carrito, etc.)
+// main.js
 
