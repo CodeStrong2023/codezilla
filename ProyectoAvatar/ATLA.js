@@ -10,6 +10,7 @@ const juego = {
     iniciar() {
         this.ocultarSecciones(); // Oculta secciones que no se deben mostrar al inicio
         this.configurarEventos(); // Configura los eventos de los botones
+        this.mostrarMensajePersonalizado();
     },
 
     // Oculta las secciones del juego
@@ -45,6 +46,22 @@ const juego = {
         document.getElementById('seleccionar-personaje').style.display = 'block';
     },
 
+    // Método para mostrar mensaje personalizado al pasar el mouse sobre los personajes
+    mostrarMensajePersonalizado() {
+        const personajes = document.querySelectorAll('.personaje-imagen');
+        const mensajeContenedor = document.getElementById('mensaje-personalizado');
+
+        personajes.forEach(personaje => {
+            personaje.addEventListener('mouseover', () => {
+                mensajeContenedor.textContent = personaje.getAttribute('data-mensaje');
+            });
+
+            personaje.addEventListener('mouseout', () => {
+                mensajeContenedor.textContent = '';
+            });
+        });
+    },
+
     // Selecciona el personaje del jugador y el enemigo
     seleccionarPersonajeJugador() {
         const personaje = this.obtenerPersonajeSeleccionado();
@@ -69,13 +86,13 @@ const juego = {
 
     // Selecciona un personaje enemigo aleatorio
     seleccionarEnemigoAleatorio() {
-        const personajes = ['Zuko', 'Katara', 'Aang', 'Toph'];
+        const personajes = ['Zuko', 'Katara', 'Aang', 'Toph', 'Azula', 'Iroh', 'Suki', 'Sokka'];
         return personajes[Math.floor(Math.random() * personajes.length)];
     },
 
     // Obtiene el personaje seleccionado por el jugador
     obtenerPersonajeSeleccionado() {
-        const personajes = ['zuko', 'katara', 'aang', 'toph'];
+        const personajes = ['zuko', 'katara', 'aang', 'toph', 'azula', 'iroh', 'suki', 'sokka'];
         for (let personaje of personajes) {
             const inputPersonaje = document.getElementById(personaje);
             if (inputPersonaje.checked) {
@@ -155,7 +172,18 @@ const juego = {
         this.mostrarMensaje('', mensaje);
         document.getElementById('seleccion-ataque').style.display = 'none';
         document.getElementById('reiniciar').style.display = 'block';
+
+        // Mostrar el mensaje de resultado
+        const mensajeResultado = document.getElementById('mensaje-resultado');
+        mensajeResultado.textContent = mensaje; // Mensaje de ganaste o perdiste
+        mensajeResultado.style.display = 'block';
+
+        // Mostrar la pregunta de reinicio
+        const mensajeReinicio = document.getElementById('mensaje-reinicio');
+        mensajeReinicio.textContent = '¿Deseas volver a jugar?';
+        mensajeReinicio.style.display = 'block';
     },
+
 
     // Reinicia el estado del juego
     reiniciarJuego() {
