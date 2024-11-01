@@ -4,81 +4,24 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Carrito de Compras - Ferretería Don Luis</title>
-    <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="/assets/css/styles.css" />
     <link rel="stylesheet" href="/cart/cart.css" />
-
-    <!-- Importación de fuentes -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
-
-    <style>
-        body {
-            padding-top: 70px; /* Para compensar el header fijo */
-        }
-        .table th, .table td {
-            vertical-align: middle;
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet" />
 </head>
 <body>
 
     <!-- Header -->
     <div id="header"></div>
 
+    <!-- Contenido principal del carrito -->
     <div class="container my-5">
-        <h2>Carrito de Compras</h2>
-        <table class="table">
-            <thead>
-                <tr>
-                    <th>Producto</th>
-                    <th>Cantidad</th>
-                    <th>Precio</th>
-                    <th>Total</th>
-                    <th>Acciones</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>
-                        <img src="/assets/img/products/product_example.png" alt="Producto 1" width="50" /> Producto 1
-                    </td>
-                    <td>
-                        <input type="number" value="1" min="1" class="form-control" style="width: 80px;" />
-                    </td>
-                    <td>$100.00</td>
-                    <td>$100.00</td>
-                    <td>
-                        <button class="btn btn-danger">Eliminar</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <img src="/assets/img/products/product_example.png" alt="Producto 2" width="50" /> Producto 2
-                    </td>
-                    <td>
-                        <input type="number" value="1" min="1" class="form-control" style="width: 80px;" />
-                    </td>
-                    <td>$50.00</td>
-                    <td>$50.00</td>
-                    <td>
-                        <button class="btn btn-danger">Eliminar</button>
-                    </td>
-                </tr>
-                <!-- Más filas de productos -->
-            </tbody>
-        </table>
-
-        <div class="d-flex justify-content-between mt-4">
-            <h4>Total a Pagar:</h4>
-            <h4>$150.00</h4>
-        </div>
-
-        <div class="d-flex justify-content-end mt-4">
-            <button class="btn btn-primary">Proceder al Pago</button>
-        </div>
+        <h1>Carrito de Compras</h1>
+        <div id="cart-items" class="mt-4"></div> <!-- Contenedor para los productos del carrito -->
+        <div id="cart-summary" class="mt-4"></div> <!-- Resumen del carrito -->
+        <button class="btn btn-primary mt-3" onclick="proceedToCheckout()">Proceder al Pago</button>
     </div>
 
     <!-- Footer -->
@@ -96,6 +39,9 @@
     </script>
 
     <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
+    <!-- Script del carrito -->
+    <script src="/cart/cart.js" defer></script>
+    <script src="/cart/cartService.js" defer></script>
 </body>
 </html>

@@ -1,123 +1,99 @@
 /* main.css */
 
-/* Estilos generales del cuerpo */
 body {
-  margin: 0; /* Sin margen */
-  margin-top: 10%;
-  font-family: 'Montserrat', sans-serif; /* Fuente */
+  margin: 0;
+  margin-top: 6em;
+  font-family: 'Montserrat', sans-serif;
 }
 
-/* Estilos para la sección de categorías */
 #categorias {
-  padding: 20px; /* Espaciado interno */
-  display: flex; /* Alineación con flexbox */
-  justify-content: space-around; /* Espacio entre íconos */
+  padding: 1.25rem;
+  display: flex;
+  justify-content: space-around;
 }
 
-/* Estilos para cada categoría */
 .categoria img {
-  max-width: 100px; /* Ancho máximo para las imágenes */
-  margin: 0 10px; /* Espaciado horizontal entre íconos */
+  max-width: 6.25rem;
+  margin: 0 0.625rem;
 }
 
-/* Estilos para la sección de productos */
 #productos {
-  padding: 20px; /* Espaciado interno */
-  text-align: center; /* Alineación del texto */
+  padding: 1.25rem;
+  text-align: center;
 }
 
-/* Estilos para cada producto */
 .producto {
-  display: inline-block; /* Disposición en línea */
-  margin: 10px; /* Espaciado externo */
+  display: inline-block;
+  margin: 0.625rem;
 }
 
-/* Estilos para las imágenes de productos */
 .producto img {
-  width: 70%; /* Ancho de la imagen */
-  height: auto; /* Mantener la relación de aspecto */
+  width: 70%;
+  height: auto;
 }
 
-/* Estilos específicos para el contenedor principal */
 main {
-  padding: 20px; /* Espaciado interno */
+  padding: 1.25rem;
 }
 
-/* Estilos para encabezados dentro de main */
 main h1 {
-  font-size: 2.5rem; /* Tamaño de fuente */
-  color: #333; /* Color del texto */
+  font-size: 2.5rem;
+  color: #333;
 }
 
-/* Estilos para párrafos dentro de main */
 main p {
-  font-size: 1.2rem; /* Tamaño de fuente */
-  line-height: 1.6; /* Altura de línea */
+  font-size: 1.2rem;
+  line-height: 1.6;
 }
 
-/* Estilos para categorías dentro de main */
 .categorias {
-  display: flex; /* Disposición en línea */
-  justify-content: space-around; /* Espacio entre categorías */
-  margin-bottom: 40px; /* Espaciado inferior */
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 2.5rem;
 }
 
-/* Estilos para las imágenes de categorías */
 .categorias img {
-  width: 100px; /* Ancho de imagen */
-  height: 100px; /* Altura de imagen */
-  border-radius: 50%; /* Bordes redondeados */
-  border: 2px solid #ccc; /* Borde */
+  width: 6.25rem;
+  height: 6.25rem;
+  border-radius: 50%;
+  border: 0.125rem solid #ccc;
 }
 
-/* Estilos para productos dentro de main */
 .productos {
-  display: grid; /* Usar grid para disposición */
-  grid-template-columns: repeat(3, 1fr); /* Tres columnas de igual tamaño */
-  gap: 20px; /* Espacio entre productos */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
 }
 
-/* Estilos para cada producto dentro de productos */
 .productos .producto {
-  background-color: white; /* Color de fondo */
-  border: 1px solid #ccc; /* Borde */
-  padding: 15px; /* Espaciado interno */
-  text-align: center; /* Alineación del texto */
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 0.9375rem;
+  text-align: center;
 }
 
-/* Estilos para imágenes de productos dentro de productos */
-.productos .producto img {
-  width: 100%; /* Ancho completo */
-  height: auto; /* Mantener la relación de aspecto */
-}
-
-/* Estilos para títulos de productos */
 .productos .producto h3 {
-  font-size: 1.5rem; /* Tamaño de fuente */
-  margin: 10px 0; /* Espaciado vertical */
+  font-size: 1.5rem;
+  margin: 0.625rem 0;
 }
 
-/* Estilos para párrafos de productos */
 .productos .producto p {
-  font-size: 1rem; /* Tamaño de fuente */
+  font-size: 1rem;
 }
 
-
-
-/* Estilos para el banner */
 #banner {
-  position: relative; /* Posicionamiento relativo para el carrusel */
-  height: 100%; /* Altura del carrusel */
-  overflow: hidden; /* Ocultar elementos que exceden el área */
+  position: relative;
+  height: 100%;
+  overflow: hidden;
 }
 
 .carousel-inner img {
-  width: 100%; /* Ancho completo */
-  height: 100%; /* Altura completa */
-  object-fit: cover; /* Mantiene la relación de aspecto de la imagen */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .carousel-control-prev,
 .carousel-control-next {
-  width: 5%; /* Ancho de los controles */
+  width: 5%;
 }

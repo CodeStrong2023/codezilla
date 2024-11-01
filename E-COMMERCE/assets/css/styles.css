@@ -1,22 +1,28 @@
 /* styles.css */
 /* Estilos generales */
 
+/* Importación de Montserrat */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
-/* Importación de Montserrat */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
 
 /* Estilo general del cuerpo */
 body {
   font-family: 'Montserrat', sans-serif; /* Fuente */
+  font-weight: 500;
   background-color: #EEEEEE; /* Color de fondo */
   color: #303841; /* Color de texto */
+  margin-top: 7%; /* Espaciado adicional en la parte superior */
+  padding-top: 70px; /* Para compensar el header fijo */
 }
 
+/* Header */
 header {
   position: fixed; /* Fija el header */
   top: 0; /* Se sitúa en la parte superior de la ventana */
@@ -27,7 +33,6 @@ header {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidad */
 }
 
-
 /* Estilos generales para el navbar */
 .navbar {
   display: flex;
@@ -37,7 +42,7 @@ header {
   padding: 10px 20px; /* Espaciado interno */
 }
 
-.navbar .container{
+.navbar .container {
   max-width: 100%;
 }
 
@@ -97,9 +102,7 @@ header {
 }
 
 /* Estilos para encabezados */
-h1,
-h2,
-h3 {
+h1, h2, h3 {
   color: #303841; /* Color de encabezados */
   margin-bottom: 20px; /* Espaciado inferior */
 }
@@ -112,7 +115,7 @@ h3 {
   padding: 10px 20px; /* Espaciado */
 }
 
-h3{
+h3 {
   color: #EEEEEE;
 }
 
@@ -147,6 +150,7 @@ h3{
   cursor: pointer; /* Cambia el cursor al pasar el mouse */
 }
 
+/* Estilos para el pie de página */
 footer {
   background-color: #303841;
   color: #EEEEEE;
@@ -200,4 +204,9 @@ footer {
 .mapa iframe {
   border: 0;
   margin-top: 10px;
+}
+
+/* Estilos para las tarjetas de productos */
+.product-card {
+  margin-bottom: 1.25rem; /* Espaciado inferior (20px) usando rem */
 }

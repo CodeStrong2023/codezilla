@@ -1,4 +1,19 @@
-<!-- Página de inicio -->
+<!-- 
+    Archivo: main.html
+    
+    Descripción: 
+    Este archivo HTML representa la página principal de la tienda digital "Ferretería Don Luis". 
+    Contiene la estructura y el diseño de la interfaz de usuario utilizando Bootstrap para garantizar un diseño responsivo. 
+
+    Secciones principales:
+    - Encabezado (Header): Se carga dinámicamente el contenido del encabezado desde el archivo externo header.html.
+    - Carrusel de Banner: Muestra imágenes promocionales a través de un carrusel de Bootstrap, destacando ofertas y novedades.
+    - Categorías de Productos: Enlaza a las diferentes categorías de productos disponibles en la tienda, mostrando los iconos de las marcas.
+    - Productos: Sección donde se generarán dinámicamente los productos disponibles mediante JavaScript.
+    - Modal de Producto: Se carga un modal desde un archivo HTML externo para mostrar detalles de los productos cuando se seleccionan.
+    - Pie de Página (Footer): Al igual que el encabezado, se carga dinámicamente desde el archivo externo footer.html.
+
+-->
 
 <!DOCTYPE html>
 <html lang="es">
@@ -7,14 +22,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ferretería Don Luis</title>
 
-    <!-- Bootstrap -->
+    <!-- Bootstrap estilos -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Hojas de estilos -->
+    <!-- Estilos personalizados -->
     <link rel="stylesheet" href="/assets/css/styles.css" />
     <link rel="stylesheet" href="main.css" />
 
@@ -22,14 +36,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
   </head>
 
   <body>
-    <!-- Header -->
-    <div id="header"></div>
+    <header id="header"></header>
 
     <!-- Banner en carrusel -->
     <section id="banner">
@@ -61,6 +74,7 @@
             />
           </div>
         </div>
+        <!-- Controles del carrusel -->
         <button
           class="carousel-control-prev"
           type="button"
@@ -85,110 +99,65 @@
     <!-- Sección de categorías por marcas -->
     <section id="categorias" class="text-center my-4">
       <div class="categoria d-flex justify-content-around">
-        <a href="/products/products.html">
-          <img src="/assets/img/icons/dremel.png" alt="dremel" />
-        </a>
-        <a href="/products/products.html">
-          <img src="/assets/img/icons/dewalt.png" alt="dewalt" />
-        </a>
-        <a href="/products/products.html">
-          <img src="/assets/img/icons/makita.png" alt="makita" />
-        </a>
-        <a href="/products/products.html">
-          <img src="/assets/img/icons/stanley.png" alt="stanley" />
-        </a>
-        <a href="/products/products.html">
-          <img src="/assets/img/icons/black_decker.png" alt="black & decker" />
-        </a>
-        <a href="/products/products.html">
-          <img src="/assets/img/icons/bosch.png" alt="bosch" />
-        </a>
+        <!-- Enlaces a las categorías de productos por marca -->
+        <a href="/products/products.html?marca=dremel"
+          ><img
+            src="/assets/img/icons/dremel.png"
+            alt="Buscar en la categoria dremel"
+        /></a>
+        <a href="/products/products.html?marca=dewalt"
+          ><img
+            src="/assets/img/icons/dewalt.png"
+            alt="Buscar en la categoria dewalt"
+        /></a>
+        <a href="/products/products.html?marca=makita"
+          ><img
+            src="/assets/img/icons/makita.png"
+            alt="Buscar en la categoria makita"
+        /></a>
+        <a href="/products/products.html?marca=stanley"
+          ><img
+            src="/assets/img/icons/stanley.png"
+            alt="Buscar en la categoria stanley"
+        /></a>
+        <a href="/products/products.html?marca=black_decker"
+          ><img
+            src="/assets/img/icons/black_decker.png"
+            alt="Buscar en la categoria black & decker"
+        /></a>
+        <a href="/products/products.html?marca=bosch"
+          ><img
+            src="/assets/img/icons/bosch.png"
+            alt="Buscar en la categoria bosch"
+        /></a>
       </div>
     </section>
 
-  <!-- Productos de la tienda -->
-  <div class="container my-5">
-    <div class="row">
-      <div class="col-md-4">
-        <div class="card">
-          <img src="/assets/img/products/product_example.png" class="card-img-top" alt="Producto 1">
-          <div class="card-body text-center">
-            <h5 class="card-title">Producto 1</h5>
-            <button class="btn btn-primary" onclick="mostrarProducto('Producto 1', 'Descripción del producto 1', '/assets/img/products/product_example.png', '$50')">Ver detalles</button>
-          </div>
-        </div>
+    <!-- Productos de la tienda -->
+    <div class="container my-5">
+      <div class="row">
+        <!-- Se generan los productos mediante JavaScript -->
       </div>
-
-      <div class="col-md-4">
-        <div class="card">
-          <img src="/assets/img/products/product_example.png" class="card-img-top" alt="Producto 1">
-          <div class="card-body text-center">
-            <h5 class="card-title">Producto 1</h5>
-            <button class="btn btn-primary" onclick="mostrarProducto('Producto 1', 'Descripción del producto 1', '/assets/img/products/product_example.png', '$50')">Ver detalles</button>
-          </div>
-        </div>
-      </div>
-
-
-      <div class="col-md-4">
-        <div class="card">
-          <img src="/assets/img/products/product_example.png" class="card-img-top" alt="Producto 1">
-          <div class="card-body text-center">
-            <h5 class="card-title">Producto 1</h5>
-            <button class="btn btn-primary" onclick="mostrarProducto('Producto 1', 'Descripción del producto 1', '/assets/img/products/product_example.png', '$50')">Ver detalles</button>
-          </div>
-        </div>
-      </div>
-
-
-      <div class="col-md-4">
-        <div class="card">
-          <img src="/assets/img/products/product_example.png" class="card-img-top" alt="Producto 1">
-          <div class="card-body text-center">
-            <h5 class="card-title">Producto 1</h5>
-            <button class="btn btn-primary" onclick="mostrarProducto('Producto 1', 'Descripción del producto 1', '/assets/img/products/product_example.png', '$50')">Ver detalles</button>
-          </div>
-        </div>
-      </div>
-
-
-      <div class="col-md-4">
-        <div class="card">
-          <img src="/assets/img/products/product_example.png" class="card-img-top" alt="Producto 1">
-          <div class="card-body text-center">
-            <h5 class="card-title">Producto 1</h5>
-            <button class="btn btn-primary" onclick="mostrarProducto('Producto 1', 'Descripción del producto 1', '/assets/img/products/product_example.png', '$50')">Ver detalles</button>
-          </div>
-        </div>
-      </div>
-
-
-      <div class="col-md-4">
-        <div class="card">
-          <img src="/assets/img/products/product_example.png" class="card-img-top" alt="Producto 1">
-          <div class="card-body text-center">
-            <h5 class="card-title">Producto 1</h5>
-            <button class="btn btn-primary" onclick="mostrarProducto('Producto 1', 'Descripción del producto 1', '/assets/img/products/product_example.png', '$50')">Ver detalles</button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Repite para otros productos -->
     </div>
-  </div>
 
-  <!-- Aquí se cargará el modal dinámicamente -->
-  <div id="modal-container"></div>
+    <!-- Importar modal para mostrar producto -->
+    <div id="modal-container"></div>
+    <script>
+      // Se carga el contenido del modal desde modal.html
+      fetch("/assets/html/modal.html")
+        .then((response) => response.text())
+        .then(
+          (data) =>
+            (document.getElementById("modal-container").innerHTML = data)
+        );
+    </script>
 
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap JS para interactividad y componentes -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-  <!-- Archivos JavaScript externos -->
-  <script src="/assets/js/cargarModal.js"></script>
-  <script src="/products/products.js"></script>
-    <div id="footer"></div>
+    <footer class="footer" id="footer"></footer>
 
-    <!-- Script para incluir header y footer -->
+    <!-- Scripts para cargar header y footer -->
     <script>
       fetch("/assets/html/header.html")
         .then((response) => response.text())
@@ -198,5 +167,10 @@
         .then((response) => response.text())
         .then((data) => (document.getElementById("footer").innerHTML = data));
     </script>
+
+    <!-- Archivos JavaScript externos -->
+    <script src="/products/products.js"></script>
+    <script src="/assets/js/modal.js"></script>
+    <script src="main.js"></script>
   </body>
 </html>

@@ -1,80 +1,60 @@
-<!-- header -->
+<!-- Header de la tienda Ferretería Don Luis 
+     Incluye la barra de navegación con el logo de la tienda y enlaces a las secciones principales. 
+     Secciones:
+     - Barra de navegación: Enlaces a la página principal, perfil de usuario y carrito de compras.
+     - Barra de categorías: Listado de categorías de productos para facilitar la navegación del usuario. 
+-->
 
 <header>
   <nav class="navbar navbar-expand-lg">
-    <div class="container">
-      <a class="navbar-brand" href="/main/main.html">
-        <img src="/assets/img/icons/logo.png" alt="Logo" class="logo" />
-        Ferretería Don Luis
-      </a>
-      <div class="search-container ms-auto">
-        <input
-          type="text"
-          placeholder="Buscar..."
-          class="form-control d-inline-block"
-          style="width: 700px"
-        />
-        <button class="search-button btn btn-primary ms-2">></button>
+      <div class="container">
+          <a class="navbar-brand" href="/main/main.html">
+              <img src="/assets/img/icons/logo.png" alt="Logo" class="logo" />
+              Ferretería Don Luis
+          </a>
+          <div class="icon-container ms-auto">
+              <a href="/main/main.html" class="icon-link">
+                  <img src="/assets/img/icons/home.png" alt="Página Principal" class="icon" />
+              </a>
+              <a href="/user/user.html" class="icon-link">
+                  <img src="/assets/img/icons/user.png" alt="Perfil" class="icon" />
+              </a>
+              <a href="/cart/cart.html" class="icon-link">
+                  <img src="/assets/img/icons/cart.png" alt="Carrito" class="icon" />
+              </a>
+          </div>
       </div>
-      <div class="icon-container ms-auto">
-        <a href="/main/main.html" class="icon-link">
-          <img
-            src="/assets/img/icons/home.png"
-            alt="Página Principal"
-            class="icon"
-          />
-        </a>
-        <a href="/user/user.html" class="icon-link">
-          <img src="/assets/img/icons/user.png" alt="Perfil" class="icon" />
-        </a>
-        <a href="/cart/cart.html" class="icon-link">
-          <img src="/assets/img/icons/cart.png" alt="Carrito" class="icon" />
-        </a>
-      </div>
-    </div>
   </nav>
+  
   <!-- Barra de categorías de productos -->
   <section id="categorias-basicas" class="bg-light py-2">
-    <div class="container">
-      <ul class="nav justify-content-center">
-        <li class="nav-item">
-          <a class="nav-link" href="/products/products.html"
-            >Herramientas Eléctricas</a
-          >
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="/products/products.html"
-            >Herramientas de Mano</a
-          >
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="/products/products.html"
-            >Materiales de Construcción</a
-          >
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="/products/products.html">Pinturas</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="/products/products.html">Tornillería</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="/products/products.html">Fontanería</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="/products/products.html">Electricidad</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="/products/products.html">Adhesivos</a>
-        </li>
-      </ul>
-    </div>
+      <div class="container">
+          <ul class="nav justify-content-center">
+              <li class="nav-item">
+                  <a class="nav-link" href="/products/products.html?categoria=Herramientas%20Eléctricas">Herramientas Eléctricas</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="/products/products.html?categoria=Herramientas%20de%20Mano">Herramientas de Mano</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="/products/products.html?categoria=Materiales%20de%20Construcción">Materiales de Construcción</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="/products/products.html?categoria=Pinturas">Pinturas</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="/products/products.html?categoria=Tornillería">Tornillería</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="/products/products.html?categoria=Fontanería">Fontanería</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="/products/products.html?categoria=Electricidad">Electricidad</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="/products/products.html?categoria=Adhesivos">Adhesivos</a>
+              </li>
+          </ul>
+      </div>
   </section>
 </header>
