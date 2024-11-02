@@ -1,30 +1,35 @@
-// cartService.js
-
-/**
- * Obtiene el carrito de compras desde el localStorage.
- * @returns {Array} Arreglo de productos en el carrito.
- */
-function getCart() {
-    const cart = JSON.parse(localStorage.getItem('cart')) || [];
-    console.log("Carrito obtenido:", cart); // Log del carrito obtenido
-    return cart;
+// Función para obtener el carrito desde localStorage
+function obtenerCarrito() {
+    return JSON.parse(localStorage.getItem("carrito")) || [];
 }
 
-/**
- * Guarda el carrito de compras en el localStorage.
- * @param {Array} cart - Arreglo de productos a guardar en el carrito.
- */
-function saveCart(cart) {
-    console.log("Guardando carrito:", cart); // Log del carrito a guardar
-    localStorage.setItem('cart', JSON.stringify(cart));
-    console.log("Carrito guardado en localStorage."); // Confirmación de guardado
+// Función para guardar el carrito en localStorage
+function guardarCarrito(carrito) {
+    localStorage.setItem("carrito", JSON.stringify(carrito));
 }
 
-/**
- * Limpia el carrito de compras del localStorage.
- */
-function clearCart() {
-    console.log("Limpiando carrito de localStorage."); // Log antes de limpiar el carrito
-    localStorage.removeItem('cart');
-    console.log("Carrito limpiado."); // Confirmación de limpieza
+// Función para agregar un producto al carrito
+function agregarProductoAlCarrito(producto) {
+    let carrito = obtenerCarrito();
+
+    // Verificar si el producto ya está en el carrito
+    const indexProducto = carrito.findIndex(item => item.id === producto.id);
+
+    if (indexProducto !== -1) {
+        // Si ya está, aumenta la cantidad
+        carrito[indexProducto].cantidad += producto.cantidad;
+    } else {
+        // Si no está, agrégalo al carrito
+        carrito.push(producto);
+    }
+
+    guardarCarrito(carrito);
+    console.log(`Producto "${producto.nombre}" agregado al carrito.`);
+    alert(`${producto.nombre} ha sido agregado al carrito.`);
+}
+
+// Función para mostrar el carrito en la consola (para pruebas)
+function mostrarCarrito() {
+    const carrito = obtenerCarrito();
+    console.log("Contenido del carrito:", carrito);
 }

@@ -53,27 +53,6 @@ header {
   margin-right: 10px; /* Espaciado a la derecha del logo */
 }
 
-/* Estilos para la barra de búsqueda */
-.search-container {
-  display: flex; /* Flexbox para alinear elementos */
-  align-items: center; /* Centrar verticalmente */
-  color: #303841; /* Color del texto */
-  padding: 5px; /* Espaciado interno */
-  margin-right: 7px; /* Espacio entre el input y el botón */
-}
-
-.search-button {
-  padding: 5px 10px; /* Espaciado interno */
-  background-color: #303841; /* Color de fondo del botón */
-  color: #7AA5D2; /* Color del texto */
-  border: none; /* Sin borde */
-  border-radius: 4px; /* Bordes redondeados */
-  cursor: pointer; /* Cambiar cursor al pasar el mouse */
-}
-
-.search-button:hover {
-  background-color: #47555E; /* Color de fondo al pasar el mouse */
-}
 
 /* Estilos para el contenedor de íconos */
 .icon-container {
@@ -128,26 +107,13 @@ h3 {
   margin-left: 20px; /* Espaciado entre opciones del menú */
 }
 
-.busqueda input {
-  padding: 5px; /* Espaciado interno */
-  border: none; /* Sin borde */
+/* del carrito */
+.contenido{
+  min-height: 100vh;
 }
 
-.busqueda button {
-  padding: 5px 10px; /* Espaciado interno */
-  border: none; /* Sin borde */
-  background-color: #EEEEEE; /* Color de fondo */
-  color: #303841; /* Color de texto */
-  cursor: pointer; /* Cambia el cursor al pasar el mouse */
-}
-
-.busqueda button:hover {
-  background-color: #dddddd; /* Cambia el color de fondo al pasar el mouse */
-}
-
-.menu-opciones img {
-  width: 30px; /* Ancho de las imágenes del menú */
-  cursor: pointer; /* Cambia el cursor al pasar el mouse */
+.size{
+  min-width: 500px;
 }
 
 /* Estilos para el pie de página */

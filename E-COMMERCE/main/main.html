@@ -135,8 +135,8 @@
 
     <!-- Productos de la tienda -->
     <div class="container my-5">
-      <div class="row">
-        <!-- Se generan los productos mediante JavaScript -->
+      <div class="row" id="productos-container">
+        <!-- Aquí se cargarán los productos dinámicamente -->
       </div>
     </div>
 
@@ -168,9 +168,9 @@
         .then((data) => (document.getElementById("footer").innerHTML = data));
     </script>
 
-    <!-- Archivos JavaScript externos -->
+    <!-- Archivos JavaScript -->
     <script src="/products/products.js"></script>
+    <script src="/assets/js/cargarModal.js"></script>
     <script src="/assets/js/modal.js"></script>
-    <script src="main.js"></script>
   </body>
 </html>

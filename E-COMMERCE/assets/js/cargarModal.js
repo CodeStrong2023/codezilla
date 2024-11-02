@@ -4,7 +4,7 @@
 
 // Función para cargar el modal desde el archivo modal.html
 document.addEventListener('DOMContentLoaded', function () {
-  console.log("Cargando el contenido del modal..."); 
+  console.log("Cargando el contenido del modal...");
   fetch('/assets/html/modal.html')
     .then(response => {
       if (!response.ok) {
@@ -14,10 +14,8 @@ document.addEventListener('DOMContentLoaded', function () {
     })
     .then(data => {
       document.getElementById('modal-container').innerHTML = data;
-      console.log("Contenido del modal cargado exitosamente."); 
+      console.log("Contenido del modal cargado exitosamente.");
 
-      inicializarBotonesProducto(); // Inicializa los botones del producto
-      console.log("Botones de producto inicializados.");
     })
     .catch(error => console.error('Error cargando el modal:', error));
 });
