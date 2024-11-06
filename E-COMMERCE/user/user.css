@@ -1,13 +1,136 @@
-/* user.css */
+/* Estilos específicos para el perfil de usuario */
 
-/* Estilos generales del cuerpo */
-body {
-  margin: 0; /*Sin margen */
-  margin-top: 7%;
-  font-family: "Montserrat", sans-serif; /* Fuente */
-  padding-top: 70px; /* Para compensar el header fijo */
-}
+/* Sidebar */
 .sidebar {
+  background-color: #343a40;
+  color: white;
   height: 100vh;
-  background-color: #f8f9fa;
+  padding-top: 20px;
+}
+
+.sidebar h4 {
+  color: #ffffff;
+  padding-left: 15px;
+}
+
+.sidebar .nav-item {
+  margin-bottom: 10px;
+}
+
+.sidebar .nav-link {
+  color: #ddd;
+  padding-left: 20px;
+}
+
+.sidebar .nav-link.active {
+  background-color: #007bff;
+  color: white;
+}
+
+.sidebar .nav-link:hover {
+  background-color: #575757;
+  color: white;
+}
+
+/* Estilo para el contenido principal del perfil */
+main {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  margin-left: 25px;
+  margin-top: 20px;
+}
+
+h2 {
+  color: #303841;
+}
+
+p {
+  font-size: 1rem;
+  color: #777;
+}
+
+h3 {
+  color: #303841;
+  margin-top: 20px;
+}
+
+.table {
+  margin-top: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.table th, .table td {
+  text-align: center;
+  padding: 10px;
+}
+
+.table th {
+  background-color: #f1f1f1;
+}
+
+/* Estilos de los botones de acción */
+button {
+  background-color: #007bff;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  margin-top: 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Media Query para pantallas pequeñas */
+@media (max-width: 600px) {
+  /* Sidebar ajustado para pantallas pequeñas */
+  .sidebar {
+      position: absolute;
+      width: 100%;
+      height: auto;
+      top: 0;
+      left: 0;
+      padding-top: 10px;
+      background-color: #343a40;
+  }
+
+  .sidebar .nav-link {
+      padding-left: 10px;
+  }
+
+  /* Ajustes en el contenido principal */
+  main {
+      margin-left: 0;
+      margin-top: 10px;
+      padding: 15px;
+  }
+
+  h2 {
+      font-size: 1.5rem;
+  }
+
+  p {
+      font-size: 0.9rem;
+  }
+
+  .table {
+      font-size: 0.9rem;
+  }
+
+  /* Estilos para los botones */
+  button {
+      font-size: 0.9rem;
+      padding: 8px 16px;
+      width: 100%;
+  }
+
+  /* Ocultar algunas partes de la página si es necesario */
+  .sidebar h4 {
+      display: none;
+  }
 }

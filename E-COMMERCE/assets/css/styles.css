@@ -2,7 +2,7 @@
 /* Estilos generales */
 
 /* Importación de Montserrat */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
 
 * {
   padding: 0;
@@ -10,116 +10,98 @@
   box-sizing: border-box;
 }
 
-
-
-/* Estilo general del cuerpo */
+/* Estilo general del body */
 body {
-  font-family: 'Montserrat', sans-serif; /* Fuente */
+  min-height: 100vh;
+
+  font-family: "Montserrat", sans-serif;
   font-weight: 500;
-  background-color: #EEEEEE; /* Color de fondo */
-  color: #303841; /* Color de texto */
-  margin-top: 7%; /* Espaciado adicional en la parte superior */
-  padding-top: 70px; /* Para compensar el header fijo */
+  background-color: #eeeeee;
+  color: #303841;
+  margin-top: 6em;
+  padding-top: 70px;
 }
 
 /* Header */
 header {
-  position: fixed; /* Fija el header */
-  top: 0; /* Se sitúa en la parte superior de la ventana */
-  left: 0; /* Alineado a la izquierda */
-  width: 100%; /* Ancho completo */
-  z-index: 1000; /* Asegura que esté encima de otros elementos */
-  background-color: white; /* Fondo blanco para que se vea bien */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidad */
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 5px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Estilos generales para el navbar */
+/* Estilos del navbar */
 .navbar {
   display: flex;
-  justify-content: space-between; /* Espacio entre elementos */
-  align-items: center; /* Centrar verticalmente */
-  background-color: #7AA5D2; /* Color de fondo del navbar */
-  padding: 10px 20px; /* Espaciado interno */
+  justify-content: space-around;
+  align-items: center;
+  background-color: #7aa5d2;
+  padding: 10px 20px;
 }
 
 .navbar .container {
-  max-width: 100%;
+  max-width: 100em;
 }
 
 /* Estilos para el logo */
 .logo {
-  width: 80px; /* Ancho del logo */
-  height: auto; /* Mantener la relación de aspecto */
-  margin-right: 10px; /* Espaciado a la derecha del logo */
+  width: 80px;
+  height: auto;
+  margin-right: 10px;
 }
-
 
 /* Estilos para el contenedor de íconos */
 .icon-container {
-  display: flex; /* Flexbox para alinear íconos */
-  align-items: center; /* Centrar verticalmente */
+  display: flex;
+  align-items: center;
 }
 
 /* Estilos para los íconos */
 .icon-link {
-  margin-left: 15px; /* Espacio entre los íconos */
+  margin-left: 2em;
 }
 
 .icon {
-  width: 70px; /* Ancho de los íconos */
-  height: auto; /* Mantener la relación de aspecto */
+  width: 70px;
+  height: auto;
 }
 
 /* Estilos de los enlaces de íconos */
 .icon-link:hover .icon {
-  opacity: 0.7; /* Efecto al pasar el mouse */
+  opacity: 0.7;
 }
 
-#header a:hover,
-#footer a:hover {
-  text-decoration: underline; /* Subrayado al pasar el mouse */
+/* Barra de categorías de productos */
+#categorias-basicas {
+  background-color: #f8f9fa;
+}
+
+#categorias-basicas .nav-link {
+  height: 56px;
+  align-content: center;
+  color: #333;
+  padding: 0.5rem 1rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#categorias-basicas .nav-item:hover .nav-link {
+  background-color: #47555e;
+  color: #fff;
 }
 
 /* Estilos para encabezados */
-h1, h2, h3 {
-  color: #303841; /* Color de encabezados */
-  margin-bottom: 20px; /* Espaciado inferior */
-}
-
-/* Estilos para la navegación del header */
-.header {
-  display: flex;
-  justify-content: space-between; /* Espacio entre elementos */
-  align-items: center; /* Alineación vertical */
-  padding: 10px 20px; /* Espaciado */
-}
-
+h1,
+h2,
 h3 {
-  color: #EEEEEE;
-}
-
-.menu-opciones {
-  display: flex; /* Disposición en línea */
-  align-items: center; /* Alineación vertical */
-}
-
-.menu-opciones div {
-  margin-left: 20px; /* Espaciado entre opciones del menú */
-}
-
-/* del carrito */
-.contenido{
-  min-height: 100vh;
-}
-
-.size{
-  min-width: 500px;
+  color: #303841;
+  margin-bottom: 20px;
 }
 
 /* Estilos para el pie de página */
 footer {
   background-color: #303841;
-  color: #EEEEEE;
+  color: #eeeeee;
   padding: 20px 0;
 }
 
@@ -137,6 +119,7 @@ footer {
 }
 
 .footer-section h3 {
+  color: #eeeeee;
   margin-bottom: 15px;
   font-size: 18px;
   font-weight: bold;
@@ -153,26 +136,79 @@ footer {
   text-decoration: underline;
 }
 
-.footer-section img {
-  width: 30px;
-  margin-right: 10px;
-}
+/* Para pantallas de celulares (ancho máximo de 600px) */
+@media (max-width: 600px) {
 
-.footer-bottom {
-  text-align: center;
-  margin-top: 20px;
-}
+  body{
+    margin-top: 0em;
+  }
 
-.footer-bottom p {
-  margin: 5px 0;
-}
+  /* Estilos del navbar */
+  .navbar {
+    padding: 5px 0px;
+  }
 
-.mapa iframe {
-  border: 0;
-  margin-top: 10px;
-}
+  a.navbar-brand {
+    font-size: 13px;
+  }
 
-/* Estilos para las tarjetas de productos */
-.product-card {
-  margin-bottom: 1.25rem; /* Espaciado inferior (20px) usando rem */
+  /* Estilos para el logo */
+  .logo {
+    width: 30px;
+  }
+
+  /* Estilos para los íconos */
+  .icon-link {
+    margin-left: 0.2em;
+  }
+
+  .icon {
+    width: 30px;
+    height: auto;
+  }
+
+  /* Barra de categorías de productos */
+  #categorias-basicas {
+    overflow-x: auto;
+    white-space: nowrap;
+    scrollbar-width: none;
+  }
+
+  #categorias-basicas .nav {
+    display: inline-flex;
+    flex-wrap: nowrap;
+  }
+
+  #categorias-basicas .nav-item {
+    margin: 0 5px;
+  }
+
+  #categorias-basicas .nav-link {
+    white-space: nowrap;
+    height: 15px;
+    font-size: 10px;
+    padding: 1px 1px;
+  }
+
+  /* Footer en una sola columna */
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-section {
+    flex: 1 1 100%;
+    margin: 10px 0;
+  }
+
+  /* Ajustes de fuente en el footer */
+  .footer-section h3 {
+    font-size: 1rem;
+  }
+
+  .footer-section p,
+  .footer-section a {
+    font-size: 10px;
+  }
 }

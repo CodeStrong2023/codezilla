@@ -1,13 +1,13 @@
 /* main.css */
 
 body {
-  margin: 0;
   margin-top: 6em;
-  font-family: 'Montserrat', sans-serif;
 }
 
+/* Categorias por marca */
 #categorias {
-  padding: 1.25rem;
+  margin-top: 20px;
+  padding: 1.2rem;
   display: flex;
   justify-content: space-around;
 }
@@ -15,70 +15,14 @@ body {
 .categoria img {
   max-width: 6.25rem;
   margin: 0 0.625rem;
-}
-
-#productos {
-  padding: 1.25rem;
-  text-align: center;
-}
-
-.producto {
-  display: inline-block;
-  margin: 0.625rem;
-}
-
-.producto img {
-  width: 70%;
-  height: auto;
-}
-
-main {
-  padding: 1.25rem;
-}
-
-main h1 {
-  font-size: 2.5rem;
-  color: #333;
-}
-
-main p {
-  font-size: 1.2rem;
-  line-height: 1.6;
-}
-
-.categorias {
-  display: flex;
-  justify-content: space-around;
-  margin-bottom: 2.5rem;
-}
-
-.categorias img {
-  width: 6.25rem;
-  height: 6.25rem;
   border-radius: 50%;
-  border: 0.125rem solid #ccc;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.productos {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.25rem;
-}
+.categoria img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 
-.productos .producto {
-  background-color: white;
-  border: 1px solid #ccc;
-  padding: 0.9375rem;
-  text-align: center;
-}
-
-.productos .producto h3 {
-  font-size: 1.5rem;
-  margin: 0.625rem 0;
-}
-
-.productos .producto p {
-  font-size: 1rem;
 }
 
 #banner {
@@ -87,13 +31,38 @@ main p {
   overflow: hidden;
 }
 
-.carousel-inner img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
 .carousel-control-prev,
 .carousel-control-next {
-  width: 5%;
+  width: 2%;
+}
+
+/* main.css */
+
+/* Para pantallas de celulares (ancho máximo de 600px) */
+@media (max-width: 600px) {
+  /* Ajuste del margen superior del body */
+  body {
+    margin-top: 0.4em;
+  }
+
+  /* Ajustes de la sección de categorías */
+  #categorias {
+    margin-top: 5px;
+  }
+
+  .categoria img {
+    max-width: 2.5rem;
+    margin: 0px 4px;
+  }
+
+  /* Ajustes del banner */
+  #banner {
+    height: auto;
+  }
+
+  /* Ajustes para los controles del carrusel */
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 4%;
+  }
 }

@@ -23,7 +23,7 @@ const productos = [
     // Herramientas de Mano
     {
         id: 3,
-        nombre: "Juego de Destornilladores",
+        nombre: "Destornilladores",
         categoria: "Herramientas de Mano",
         precio: 2499.99,
         descripcion: "Juego de 10 destornilladores de diferentes tamaños y tipos.",
@@ -193,9 +193,6 @@ const productos = [
     }
 ];
 
-
-
-
 // Función para obtener el parámetro de la URL
 function obtenerParametro(param) {
     const urlParams = new URLSearchParams(window.location.search);
@@ -225,7 +222,7 @@ function cargarProductos(marca) {
     console.log(`Productos filtrados: ${productosFiltrados.length}`); // Log de productos filtrados
     productosFiltrados.forEach(producto => {
         const productoDiv = document.createElement("div");
-        productoDiv.classList.add("col-md-4", "mb-4");
+        productoDiv.classList.add("card-style", "col-md-4", "mb-4");
 
         productoDiv.innerHTML = `
             <div class="card">

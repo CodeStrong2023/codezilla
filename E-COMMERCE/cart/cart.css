@@ -1,0 +1,165 @@
+/* Estilos específicos para el carrito de compras */
+
+/* Contenedor principal del carrito */
+.contenido {
+  background-color: #f8f9fa;
+  min-height: 100vh;
+  padding-top: 20px;
+}
+
+/* Título principal */
+h1 {
+  color: #303841;
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+/* Estilo para los productos en el carrito */
+#cart-items {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.card {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.card-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+}
+
+.size {
+  display: flex;
+  align-items: center;
+}
+
+.card-title {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #303841;
+}
+
+.card-text {
+  font-size: 1rem;
+  color: #777;
+}
+
+.card-body img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.d-flex .btn {
+  padding: 5px 10px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.d-flex .btn-secondary {
+  background-color: #6c757d;
+  color: white;
+}
+
+.d-flex .btn-secondary:hover {
+  background-color: #5a6268;
+}
+
+.d-flex .btn-danger {
+  background-color: #dc3545;
+  color: white;
+  margin-left: 10px;
+}
+
+.d-flex .btn-danger:hover {
+  background-color: #c82333;
+}
+
+/* Resumen del carrito */
+#cart-summary {
+  background-color: #ffffff;
+  padding: 20px;
+  margin-top: 30px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+#cart-summary .total {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #303841;
+}
+
+#cart-summary button {
+  width: 100%;
+  padding: 10px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+}
+
+
+/* Media Query para pantallas pequeñas */
+@media (max-width: 600px) {
+  /* Ajustes para el contenedor principal */
+  .contenido {
+    padding: 10px;
+  }
+
+  /* Ajustes para las tarjetas de productos */
+  .card-body {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .card-body img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .card-title {
+    font-size: 1rem;
+  }
+
+  .card-text {
+    font-size: 0.9rem;
+  }
+
+  .d-flex {
+    gap: 15px;
+  }
+
+  .d-flex .btn {
+    font-size: 1rem;
+    padding: 0px 10px;
+  }
+
+  /* Resumen del carrito */
+  #cart-summary {
+    padding: 15px;
+  }
+
+  #cart-summary .total {
+    font-size: 1.2rem;
+  }
+
+  #cart-summary button {
+    font-size: 1rem;
+    padding: 12px;
+  }
+}
