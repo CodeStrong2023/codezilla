@@ -1,0 +1,68 @@
+/* main.css */
+
+body {
+  margin-top: 6em;
+}
+
+/* Categorias por marca */
+#categorias {
+  margin-top: 20px;
+  padding: 1.2rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+.categoria img {
+  max-width: 6.25rem;
+  margin: 0 0.625rem;
+  border-radius: 50%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.categoria img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+
+}
+
+#banner {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 2%;
+}
+
+/* main.css */
+
+/* Para pantallas de celulares (ancho máximo de 600px) */
+@media (max-width: 600px) {
+  /* Ajuste del margen superior del body */
+  body {
+    margin-top: 0.4em;
+  }
+
+  /* Ajustes de la sección de categorías */
+  #categorias {
+    margin-top: 5px;
+  }
+
+  .categoria img {
+    max-width: 2.5rem;
+    margin: 0px 4px;
+  }
+
+  /* Ajustes del banner */
+  #banner {
+    height: auto;
+  }
+
+  /* Ajustes para los controles del carrusel */
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 4%;
+  }
+}

@@ -1,0 +1,118 @@
+
+
+.product-card, .card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Estilos para las imágenes dentro de las tarjetas */
+.product-card img, .card-img-top {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Títulos de los productos */
+.product-card h3, .card-title {
+    font-size: 1.2rem;
+    color: #303841;
+    margin: 0.8rem 0;
+}
+
+/* Descripción del producto */
+.product-card p, .card-text {
+    font-size: 1rem;
+    color: #777;
+    margin-bottom: 1rem;
+}
+
+/* Precio del producto */
+.product-card .price, .card .price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #7AA5D2;
+}
+
+/* Efecto al pasar el ratón sobre la tarjeta */
+.product-card:hover, .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Botones dentro de las tarjetas */
+.product-card button, .card-body .btn {
+    background-color: #7AA5D2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.product-card button:hover, .card-body .btn:hover {
+    background-color: #47555E; /* Cambia de color al pasar el ratón */
+}
+
+/* Media Query para pantallas pequeñas */
+@media (max-width: 600px) {
+
+    .card-style{
+        background-color: aqua;
+        width: 40%;
+        padding: 0px;
+        
+    }
+
+
+    /* Ajustes en el contenedor de productos */
+    #productos-container {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Ajusta el tamaño de las columnas */
+    }
+
+    .grilla{
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    /* Ajuste en las tarjetas de producto */
+
+    .product-card, .card {
+        padding: 1px;
+    }
+    
+
+    .product-card h3, .card-title {
+        font-size: 10px;
+    }
+
+    .product-card p, .card-text {
+        font-size: 10px;
+    }
+
+    .product-card .price, .card .price {
+        font-size: 10px;
+    }
+
+    .product-card button, .card-body .btn {
+        font-size: 10px; /* Reduce el tamaño del botón */
+        padding: 0.1rem 0.1rem;
+    }
+}
+
+/* Diseño de fila para pantallas grandes */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.card-body{
+    padding: 0px 0px 5px 0px;
+    justify-content: center;
+}

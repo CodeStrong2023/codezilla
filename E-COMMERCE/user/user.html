@@ -1,0 +1,102 @@
+<!-- user.html - Perfil de Usuario -->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Perfil de Usuario - Ferretería Don Luis</title>
+    
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <link rel="stylesheet" href="/user/user.css" />
+
+    <!-- Importación de fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+</head>
+<body>
+
+    <!-- Header -->
+    <div id="header"></div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <nav class="col-md-3 col-lg-2 d-md-block sidebar">
+                <div class="position-sticky">
+                    <h4 class="p-3">Bienvenido, [Nombre de Usuario]</h4>
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="/user/profile.html">Perfil</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/user/order-history.html">Historial de Compras</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/user/settings.html">Configuración</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/user/logout.html">Cerrar Sesión</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <main class="col-md-9 ms-sm-auto col-lg-10 px-4">
+                <h2>Perfil de Usuario</h2>
+                <p><strong>Nombre:</strong> [Nombre Completo]</p>
+                <p><strong>Email:</strong> [Email]</p>
+                <p><strong>Teléfono:</strong> [Teléfono]</p>
+                <p><strong>Dirección:</strong> [Dirección]</p>
+
+                <h3>Historial de Compras</h3>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>ID de Compra</th>
+                            <th>Fecha</th>
+                            <th>Monto</th>
+                            <th>Estado</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>#001</td>
+                            <td>2024-10-15</td>
+                            <td>$100.00</td>
+                            <td>Completado</td>
+                        </tr>
+                        <tr>
+                            <td>#002</td>
+                            <td>2024-10-20</td>
+                            <td>$50.00</td>
+                            <td>En Proceso</td>
+                        </tr>
+                        <!-- Más filas de historial -->
+                    </tbody>
+                </table>
+            </main>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+
+    <!-- Script para incluir header y footer -->
+    <script>
+        fetch("/assets/html/header.html")
+            .then((response) => response.text())
+            .then((data) => (document.getElementById("header").innerHTML = data));
+
+        fetch("/assets/html/footer.html")
+            .then((response) => response.text())
+            .then((data) => (document.getElementById("footer").innerHTML = data));
+    </script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

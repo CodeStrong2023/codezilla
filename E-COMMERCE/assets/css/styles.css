@@ -1,0 +1,214 @@
+/* styles.css */
+/* Estilos generales */
+
+/* Importación de Montserrat */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Estilo general del body */
+body {
+  min-height: 100vh;
+
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  background-color: #eeeeee;
+  color: #303841;
+  margin-top: 6em;
+  padding-top: 70px;
+}
+
+/* Header */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 5px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos del navbar */
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #7aa5d2;
+  padding: 10px 20px;
+}
+
+.navbar .container {
+  max-width: 100em;
+}
+
+/* Estilos para el logo */
+.logo {
+  width: 80px;
+  height: auto;
+  margin-right: 10px;
+}
+
+/* Estilos para el contenedor de íconos */
+.icon-container {
+  display: flex;
+  align-items: center;
+}
+
+/* Estilos para los íconos */
+.icon-link {
+  margin-left: 2em;
+}
+
+.icon {
+  width: 70px;
+  height: auto;
+}
+
+/* Estilos de los enlaces de íconos */
+.icon-link:hover .icon {
+  opacity: 0.7;
+}
+
+/* Barra de categorías de productos */
+#categorias-basicas {
+  background-color: #f8f9fa;
+}
+
+#categorias-basicas .nav-link {
+  height: 56px;
+  align-content: center;
+  color: #333;
+  padding: 0.5rem 1rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#categorias-basicas .nav-item:hover .nav-link {
+  background-color: #47555e;
+  color: #fff;
+}
+
+/* Estilos para encabezados */
+h1,
+h2,
+h3 {
+  color: #303841;
+  margin-bottom: 20px;
+}
+
+/* Estilos para el pie de página */
+footer {
+  background-color: #303841;
+  color: #eeeeee;
+  padding: 20px 0;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-section {
+  flex: 1 1 200px;
+  margin: 10px;
+}
+
+.footer-section h3 {
+  color: #eeeeee;
+  margin-bottom: 15px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.footer-section p,
+.footer-section a {
+  font-size: 14px;
+  color: #f0f0f0;
+  text-decoration: none;
+}
+
+.footer-section a:hover {
+  text-decoration: underline;
+}
+
+/* Para pantallas de celulares (ancho máximo de 600px) */
+@media (max-width: 600px) {
+
+  body{
+    margin-top: 0em;
+  }
+
+  /* Estilos del navbar */
+  .navbar {
+    padding: 5px 0px;
+  }
+
+  a.navbar-brand {
+    font-size: 13px;
+  }
+
+  /* Estilos para el logo */
+  .logo {
+    width: 30px;
+  }
+
+  /* Estilos para los íconos */
+  .icon-link {
+    margin-left: 0.2em;
+  }
+
+  .icon {
+    width: 30px;
+    height: auto;
+  }
+
+  /* Barra de categorías de productos */
+  #categorias-basicas {
+    overflow-x: auto;
+    white-space: nowrap;
+    scrollbar-width: none;
+  }
+
+  #categorias-basicas .nav {
+    display: inline-flex;
+    flex-wrap: nowrap;
+  }
+
+  #categorias-basicas .nav-item {
+    margin: 0 5px;
+  }
+
+  #categorias-basicas .nav-link {
+    white-space: nowrap;
+    height: 15px;
+    font-size: 10px;
+    padding: 1px 1px;
+  }
+
+  /* Footer en una sola columna */
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-section {
+    flex: 1 1 100%;
+    margin: 10px 0;
+  }
+
+  /* Ajustes de fuente en el footer */
+  .footer-section h3 {
+    font-size: 1rem;
+  }
+
+  .footer-section p,
+  .footer-section a {
+    font-size: 10px;
+  }
+}
