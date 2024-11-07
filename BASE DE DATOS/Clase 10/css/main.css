@@ -1,0 +1,75 @@
+body {
+  background-color: rgb(241, 208, 115);
+  margin: 0;
+  padding: 0;
+  font-family: "IBM Plex Sans", sans-serif;
+}
+
+nav {
+  width: auto;
+  display: flex;
+  justify-content: space-between;
+  color: rgb(63, 38, 1);
+  padding: 15px;
+}
+nav p {
+  font-size: 1.5em;
+  padding-left: 30px;
+}
+nav .icons {
+  display: flex;
+  gap: 15px;
+}
+nav .icons button {
+  background: none;
+  border: none;
+}
+
+article {
+  width: auto;
+  color: rgb(63, 38, 1);
+  display: flex;
+  justify-content: space-around;
+}
+article .objetivo-section {
+  display: flex;
+  flex-direction: column;
+  padding-top: 50px;
+  gap: 25px;
+  justify-content: center;
+  align-items: center;
+}
+article h1 {
+  font-size: 3em;
+  padding: 0;
+  margin: 0;
+}
+article p {
+  font-size: 1em;
+}
+article button {
+  width: 12vw;
+  padding: 20px;
+  background-color: rgb(224, 124, 31);
+  border: none;
+}
+article .image-section {
+  width: 12vw;
+}
+article .img {
+  border-radius: 50px;
+  width: 25vw;
+  padding: 20px;
+}
+
+main {
+  background-color: rgb(90, 89, 28);
+}
+
+footer {
+  background-color: rgb(199, 124, 20);
+  width: 100%;
+  height: 250px;
+}
+
+/*# sourceMappingURL=main.css.map */
