@@ -1,4 +1,3 @@
-
 // Función para renderizar los elementos del carrito
 function renderCart() {
   console.log("Iniciando renderCart...");
@@ -94,38 +93,32 @@ function eliminarProducto(index) {
 const mp = new MercadoPago('APP_USR-980da1ea-e319-449d-a161-b8e6c005386e', {
   locale: 'es-AR',
 });
+console.log("SDK de Mercado Pago inicializado con la clave de acceso.");
 
-const generateCartDescription = () => {
-  return carrito.map(producto => `${producto.nombre} (x${producto.cantidad})`).join(', ');
-};
-
-// Función para proceder al pago
+// Proceder al pago
 document.getElementById("checkout-btn").addEventListener("click", async () => {
   try {
     console.log("Iniciando proceso de checkout...");
-
-    let carrito = obtenerCarrito();
-    console.log("Carrito en el proceso de checkout:", carrito);
-
-    if (carrito.length === 0) {
-      alert("El carrito está vacío. Agrega productos antes de proceder al pago.");
-      return;
-    }
 
     const total = renderCart(); // Obtenemos el total calculado al renderizar el carrito
     console.log("Total a pagar:", total);
 
     if (total <= 0) {
       alert("El total no es válido.");
+      console.log("El total es 0 o menor, deteniendo el proceso de checkout.");
       return;
     }
 
     // Crear el objeto de datos del pedido
     const orderData = {
-      title: generateCartDescription(),
-      quantity: 1,
-      unit_price: total,
+      items: obtenerCarrito().map(producto => ({
+        title: producto.nombre,
+        quantity: producto.cantidad,
+        unit_price: parseFloat(producto.precio), // Aseguramos que sea un número
+        currency_id: "ARS"
+      })),
     };
+    console.log("Datos del pedido enviados a la API de Mercado Pago:", orderData);
 
     // Hacer la solicitud para crear la preferencia en Mercado Pago
     const response = await fetch("http://localhost:3000/create_preference", {
@@ -138,33 +131,56 @@ document.getElementById("checkout-btn").addEventListener("click", async () => {
 
     const preference = await response.json();
     console.log("Respuesta de la API de Mercado Pago:", preference);
+
+    // Verificamos si hay un error en la respuesta
+    if (preference.error) {
+      alert("Hubo un error al crear la preferencia: " + preference.error);
+      console.log("Error al crear la preferencia:", preference.error);
+      return;
+    }
+
     createCheckoutButton(preference.id);
+
   } catch (error) {
     alert("Error en la solicitud de checkout:", error);
     console.error("Error en el proceso de checkout:", error);
   }
 });
 
-
 // Función para crear el botón de pago
 const createCheckoutButton = (preferenceId) => {
+  console.log("Intentando crear el botón de checkout con preferenceId:", preferenceId);
+
+  // Verificar si ya existe el botón de pago en el contenedor
+  if (window.checkoutButton) {
+    console.log("El botón de checkout ya ha sido creado. No se generará otro.");
+    return; // Si ya existe, no creamos uno nuevo
+  }
 
   const bricksBuilder = mp.bricks();
 
-  console.log("Creando botón de checkout con preferenceId:", preferenceId);
-
   const renderComponent = async () => {
-    if (window.checkoutButton) window.checkoutButton.unmount();
+    console.log("Renderizando componente del botón de pago...");
 
-    await bricksBuilder.create("wallet", "wallet_container", {
+    // Crear y montar el botón de pago
+    window.checkoutButton = await bricksBuilder.create("wallet", "wallet_container", {
       initialization: {
         preferenceId: preferenceId,
+        redirectMode: 'modal',
+      },
+      customization: {
+        texts: {
+          valueProp: 'smart_option',
+        },
       },
     });
+
+    console.log("Botón de checkout creado con éxito.");
   };
 
   renderComponent();
 };
+
 
 // Cargar el carrito cuando se abre la página
 document.addEventListener("DOMContentLoaded", () => {
