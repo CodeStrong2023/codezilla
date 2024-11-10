@@ -13,6 +13,7 @@ CREATE TABLE Usuarios (
     email VARCHAR(100) NOT NULL UNIQUE,
     direccion VARCHAR(255),
     telefono VARCHAR(15)NOT NULL
+    contrasena VARCHAR(255) NOT NULL
 );
 CREATE TABLE Carrito (
     id_carrito INT AUTO_INCREMENT PRIMARY KEY,
