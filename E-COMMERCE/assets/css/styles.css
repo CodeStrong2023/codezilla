@@ -1,0 +1,178 @@
+/* styles.css */
+/* Estilos generales */
+
+/* Importación de Montserrat */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+
+/* Estilo general del cuerpo */
+body {
+  font-family: 'Montserrat', sans-serif; /* Fuente */
+  font-weight: 500;
+  background-color: #EEEEEE; /* Color de fondo */
+  color: #303841; /* Color de texto */
+  margin-top: 7%; /* Espaciado adicional en la parte superior */
+  padding-top: 70px; /* Para compensar el header fijo */
+}
+
+/* Header */
+header {
+  position: fixed; /* Fija el header */
+  top: 0; /* Se sitúa en la parte superior de la ventana */
+  left: 0; /* Alineado a la izquierda */
+  width: 100%; /* Ancho completo */
+  z-index: 1000; /* Asegura que esté encima de otros elementos */
+  background-color: white; /* Fondo blanco para que se vea bien */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidad */
+}
+
+/* Estilos generales para el navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between; /* Espacio entre elementos */
+  align-items: center; /* Centrar verticalmente */
+  background-color: #7AA5D2; /* Color de fondo del navbar */
+  padding: 10px 20px; /* Espaciado interno */
+}
+
+.navbar .container {
+  max-width: 100%;
+}
+
+/* Estilos para el logo */
+.logo {
+  width: 80px; /* Ancho del logo */
+  height: auto; /* Mantener la relación de aspecto */
+  margin-right: 10px; /* Espaciado a la derecha del logo */
+}
+
+
+/* Estilos para el contenedor de íconos */
+.icon-container {
+  display: flex; /* Flexbox para alinear íconos */
+  align-items: center; /* Centrar verticalmente */
+}
+
+/* Estilos para los íconos */
+.icon-link {
+  margin-left: 15px; /* Espacio entre los íconos */
+}
+
+.icon {
+  width: 70px; /* Ancho de los íconos */
+  height: auto; /* Mantener la relación de aspecto */
+}
+
+/* Estilos de los enlaces de íconos */
+.icon-link:hover .icon {
+  opacity: 0.7; /* Efecto al pasar el mouse */
+}
+
+#header a:hover,
+#footer a:hover {
+  text-decoration: underline; /* Subrayado al pasar el mouse */
+}
+
+/* Estilos para encabezados */
+h1, h2, h3 {
+  color: #303841; /* Color de encabezados */
+  margin-bottom: 20px; /* Espaciado inferior */
+}
+
+/* Estilos para la navegación del header */
+.header {
+  display: flex;
+  justify-content: space-between; /* Espacio entre elementos */
+  align-items: center; /* Alineación vertical */
+  padding: 10px 20px; /* Espaciado */
+}
+
+h3 {
+  color: #EEEEEE;
+}
+
+.menu-opciones {
+  display: flex; /* Disposición en línea */
+  align-items: center; /* Alineación vertical */
+}
+
+.menu-opciones div {
+  margin-left: 20px; /* Espaciado entre opciones del menú */
+}
+
+/* del carrito */
+.contenido{
+  min-height: 100vh;
+}
+
+.size{
+  min-width: 500px;
+}
+
+/* Estilos para el pie de página */
+footer {
+  background-color: #303841;
+  color: #EEEEEE;
+  padding: 20px 0;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-section {
+  flex: 1 1 200px;
+  margin: 10px;
+}
+
+.footer-section h3 {
+  margin-bottom: 15px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.footer-section p,
+.footer-section a {
+  font-size: 14px;
+  color: #f0f0f0;
+  text-decoration: none;
+}
+
+.footer-section a:hover {
+  text-decoration: underline;
+}
+
+.footer-section img {
+  width: 30px;
+  margin-right: 10px;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.footer-bottom p {
+  margin: 5px 0;
+}
+
+.mapa iframe {
+  border: 0;
+  margin-top: 10px;
+}
+
+/* Estilos para las tarjetas de productos */
+.product-card {
+  margin-bottom: 1.25rem; /* Espaciado inferior (20px) usando rem */
+}

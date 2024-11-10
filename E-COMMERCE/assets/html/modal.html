@@ -1,0 +1,49 @@
+<!-- modal.html -->
+<!-- 
+Este archivo define un modal de Bootstrap que se utiliza para mostrar información detallada 
+sobre un producto, incluyendo su título, imagen, descripción y precio. 
+También incluye un botón para agregar el producto al carrito de compras. 
+El modal se activa mediante interacción del usuario y se cierra sin recargar la página. 
+-->
+
+<div
+  class="modal fade"
+  id="productoModal"
+  tabindex="-1"
+  aria-labelledby="productoModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="productoModalLabel">Título del producto</h5>
+
+        <!-- Botón para cerrar el modal -->
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Cerrar"
+        ></button>
+      </div>
+
+      <!-- Cuerpo del modal -->
+      <div class="modal-body">
+        <img
+          id="productoImagen"
+          src=""
+          class="img-fluid mb-3"
+          alt="Imagen del producto"
+        />
+        <p id="productoDescripcion">Descripción del producto</p>
+        <h4 id="productoPrecio"></h4>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Importar Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Importar el archivo modal.js -->
+<script src="/assets/js/modal.js"></script>
